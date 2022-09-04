@@ -127,15 +127,17 @@
     margin: 40px auto 20px;
     padding: 40px 40px;
     text-align: center;
+    border: solid 4px v.$white;
+    border-radius: 16px;
     background-color: v.$button-color;
 
     &__spin {
       margin-bottom: 20px;
       padding: 10px 40px;
-      // width: 100%;
       border: solid 4px v.$white;
       font-size: 20px;
       font-weight: bold;
+      color: v.$font-color;
       background-color: v.$light-blue;
       border-radius: 16px;
     }
@@ -146,7 +148,6 @@
       margin: 0 auto;
       max-width: 760px;
       justify-content: center;
-      border-radius: 16px;
       font-size: 24px;
       font-weight: bold;
       font-family: "Yuji Syuku", serif;
