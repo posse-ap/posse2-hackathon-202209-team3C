@@ -2,7 +2,7 @@
 @use "../global/mixin" as m;
 
 .game {
-  &__rule {
+  &__blackboard {
     &__container {
       max-width: 434px;
       width: 50%;

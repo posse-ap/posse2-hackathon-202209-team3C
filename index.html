@@ -27,28 +27,91 @@
     <div class="container">
       <!-- start header -->
 
-      <header class="header"></header>
+      <header class="header">
+        <div class="header__inner">
+          <div class="header__inner__slider header__inner__slider--one">
+            <p class="header__inner__slider__text">
+              テキストテキストテキストテキストテキスト
+            </p>
+            <p class="header__inner__slider__text">
+              テキストテキストテキストテキストテキスト
+            </p>
+            <p class="header__inner__slider__text">
+              テキストテキストテキストテキストテキスト
+            </p>
+            <p class="header__inner__slider__text">
+              テキストテキストテキストテキストテキスト
+            </p>
+            <p class="header__inner__slider__text">
+              テキストテキストテキストテキストテキスト
+            </p>
+          </div>
+
+          <div class="header__inner__slider header__inner__slider--two">
+            <p class="header__inner__slider__text">
+              テキストテキストテキストテキストテキスト
+            </p>
+            <p class="header__inner__slider__text">
+              テキストテキストテキストテキストテキスト
+            </p>
+            <p class="header__inner__slider__text">
+              テキストテキストテキストテキストテキスト
+            </p>
+            <p class="header__inner__slider__text">
+              テキストテキストテキストテキストテキスト
+            </p>
+            <p class="header__inner__slider__text">
+              テキストテキストテキストテキストテキスト
+            </p>
+          </div>
+        </div>
+      </header>
 
       <!-- start main -->
       <main class="main">
         <!-- start game -->
         <section class="game">
           <div class="game__inner">
-            <div class="game__rule__container">
-              <span class="game__rule__chalk__1"></span>
-              <span class="game__rule__chalk__2"></span>
-              <span class="game__rule__eraser__1"></span>
-              <span class="game__rule__eraser__2"></span>
-              <ul class="game__rule__list">
-                <li class="game__rule__item"></li>
-              </ul>
+            <!-- start game__start-display -->
+            <div class="game__start-display">
+              <div class="game__blackboard__container">
+                <span class="game__blackboard__chalk__1"></span>
+                <span class="game__blackboard__chalk__2"></span>
+                <span class="game__blackboard__eraser__1"></span>
+                <span class="game__blackboard__eraser__2"></span>
+                <ul class="game__blackboard__list">
+                  <li class="game__blackboard__item"></li>
+                </ul>
+              </div>
+              <div class="game__start-display__container">
+                <h1 class="game__title">コミもく</h1>
+                <p class="game__text">ニックネームを入力してね！</p>
+                <input
+                  type="text"
+                  class="game__input game__start-display__input"
+                />
+                <button class="game__button game__start__button">
+                  スタート
+                </button>
+              </div>
             </div>
-            <div class="game__start__container">
-              <h1 class="game__title">コミもく</h1>
-              <p class="game__text">ニックネームを入力してね！</p>
-              <input type="text" class="game__input game__input__name" />
-              <button class="game__button game__start__button">スタート</button>
-            </div>
+            <!-- end start game__start-display -->
+
+            <!-- start game__theme-display -->
+            <div class="game__theme-display"></div>
+            <!-- end game__theme-display -->
+
+            <!-- start game__load-display -->
+            <div class="game__load-display"></div>
+            <!-- end game__load-display -->
+
+            <!-- start game__play-display -->
+            <div class="game__play-display"></div>
+            <!-- end game__play-display -->
+
+            <!-- start game__finish-display -->
+            <div class="game__finish-display"></div>
+            <!-- end game__finish-display -->
           </div>
         </section>
       </main>
