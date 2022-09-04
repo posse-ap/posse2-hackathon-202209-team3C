@@ -309,7 +309,6 @@ body {
 }
 
 .game__theme-display {
-  display: none;
   height: 100%;
 }
 .game__theme-display__head {
@@ -341,7 +340,6 @@ body {
 }
 
 .game__play-display {
-  display: none;
   height: 100%;
 }
 .game__play-display__head {
@@ -487,4 +485,8 @@ body {
   right: 36%;
   border: solid 5px #000;
   border-radius: 1px;
+}
+
+.js-none {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
