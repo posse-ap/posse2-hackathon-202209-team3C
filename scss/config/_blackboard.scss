@@ -3,15 +3,20 @@
 
 .game {
   &__blackboard {
+    position: relative;
+    width: 50%;
     &__container {
       max-width: 434px;
-      width: 50%;
+      // width: 50%;
       height: 420px;
+      padding: 0 10px 10px;
       // background-color: v.$blue;
       background-color: v.$blackboard-color;
       border: solid 8px v.$blackboard-border-color;
       border-radius: 5px;
       position: relative;
+      overflow-y: scroll;
+      line-height: 1.5;
     }
     &__chalk__1::before,
     &__chalk__1::after,
@@ -19,18 +24,19 @@
     &__chalk__2::after {
       position: absolute;
       content: "";
-      bottom: 0;
+      bottom: 1.5%;
+      z-index: 10;
     }
     &__chalk__1::before {
       width: 5%;
       right: 10%;
-      border: solid 3px v.$chalk-red-color;
-      border-radius: 4px 4px 3px 4px;
+      border: solid 3px v.$white;
+      border-radius: 4px;
     }
     &__chalk__1::after {
       width: 5%;
       right: 50%;
-      border: solid 3px v.$white;
+      border: solid 3px v.$chalk-red-color;
       border-radius: 2px;
     }
     &__chalk__2::before {
@@ -43,25 +49,26 @@
       width: 6%;
       left: 25%;
       border: solid 3px v.$chalk-yellow-color;
-      border-radius: 0 0 3px 3px;
+      border-radius: 3px;
     }
     &__eraser__1::before,
     &__eraser__1::after,
     &__eraser__2::before {
       position: absolute;
       content: "";
+      z-index: 5;
     }
     &__eraser__1::before {
-      bottom: 0;
+      bottom: 1%;
       width: 10%;
       right: 30%;
       border: solid 10px v.$eraser-under-color;
-      border-radius: 1px 5px;
+      border-radius: 0 0 3px 3px;
     }
     &__eraser__1::after {
       bottom: 20px;
       width: 13%;
-      right: 30%;
+      right: 29.5%;
       border: solid 5px v.$eraser-top-color;
       border-radius: 1px;
     }
@@ -72,5 +79,117 @@
       border: solid 5px v.$black;
       border-radius: 1px;
     }
+    &__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      height: 60%;
+      margin: calc(40% / 2) auto;
+      background-color: v.$blackboard-color;
+      color: v.$white;
+      font-size: 50px;
+      border: solid 3px v.$white;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.7;
+        color: v.$chalk-yellow-color;
+        border-color: v.$chalk-yellow-color;        
+      }
+    }
+    &__title {
+      position: sticky;
+      top: 0;
+      color: v.$white;
+      background-color: v.$blackboard-color;
+      font-size: 40px;
+
+    }
+    &__rule {
+      margin-top: 10%;
+      font-size: 30px;
+      color: v.$white;
+
+      &__title {
+        text-align: center;
+      }
+
+      &__text {
+        &::before {
+          content: '・';
+        }
+      }
+
+      &__red {
+        color: v.$chalk-red-color;
+      }
+      &__blue {
+        color: v.$chalk-blue-color;
+      }
+      &__yellow {
+        color: v.$chalk-yellow-color;
+      }
+    }
   }
+
+  // &__modal {
+  //   display: none;
+  //   position: fixed;
+  //   z-index: 1;
+  //   left: 0;
+  //   top: 0;
+  //   height: 100%;
+  //   width: 100%;
+  //   background-color: rgba(0,0,0,0.5);
+    
+  //   &__content {
+  //     margin: auto;
+  //     width: 70%;
+  //     height: 70%;
+  //     position: fixed;
+  //     top: calc(30% / 2);
+  //     left: calc(30% / 2);
+  //     padding: 0 1% 1%;
+  //     background-color: v.$blackboard-color;
+  //     color: v.$white;
+  //     font-size: 30px;
+  //     border: solid 10px v.$blackboard-border-color;
+  //     overflow-y: scroll;
+  //   }
+
+  //   &__title {
+  //     display: flex;
+  //     justify-content: space-between;
+  //     align-items: center;
+  //     padding: 1%;
+  //     position: sticky;
+  //     top: 0;
+  //     background-color: v.$blackboard-color;
+  //     z-index: 1;
+  //   }
+    
+  //   &__close {
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     width: 1em;
+  //     height: 1em;
+  //     padding: 1%;
+  //     border: solid 3px v.$white;
+  //     border-radius: 50%;
+
+  //     &:hover {
+  //       cursor: pointer;
+  //     }
+  //   }
+
+  //   &__content div p {
+  //     line-height: 1.5;
+
+  //     &::before {
+  //       content: '・';
+  //     }
+  //   }
+  // }
 }
