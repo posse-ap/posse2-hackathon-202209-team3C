@@ -99,7 +99,10 @@
 
             <!-- start game__theme-display -->
             <div class="game__theme-display">
-              <h1 class="game__title game__theme-display__title">コミもく</h1>
+              <div class="game__theme-display__head">
+                <h1 class="game__title game__theme-display__title">コミもく</h1>
+                <div class="game__theme-display--return" id="return">やり直す</div>
+              </div>
               <p class="game__text">お題を入力してね！</p>
               <div class="game__theme-display__input__container">
                 <input
@@ -136,7 +139,27 @@
             <!-- end game__load-display -->
 
             <!-- start game__play-display -->
-            <div class="game__play-display"></div>
+            <div class="game__play-display">
+              <div class="game__play-display__head">
+                <h1 class="game__title game__play-display__title">コミもく</h1>
+                <div class="game__play-display--finish" id="finish">終了する</div>
+            </div>
+            <div class="game__play-display__slot">
+              <div class="game__play-display__slot__left">
+                <p id="slot-left">ダミーテキスト</p>
+              </div>
+              <div class="game__play-display__slot__right">
+                <p id="slot-right">ダミーテキスト</p>
+              </div>
+            </div>
+            <div class="game__play-display__button">
+              <div class="game__play-display__button__left">
+                <button>回す</button>
+              </div>
+              <div class="game__play-display__button__right">
+                <button>回す</button>
+              </div>
+            </div>
             <!-- end game__play-display -->
 
             <!-- start game__finish-display -->

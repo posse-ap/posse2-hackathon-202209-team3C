@@ -270,6 +270,7 @@ body {
   border: none;
   border-radius: 30px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .game__start-display {
@@ -298,6 +299,16 @@ body {
   display: none;
   height: 100%;
 }
+.game__theme-display__head {
+  display: flex;
+  justify-content: space-between;
+}
+.game__theme-display--return {
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
 .game__theme-display__title {
   padding-bottom: 40px;
 }
@@ -317,7 +328,84 @@ body {
 }
 
 .game__play-display {
+  display: none;
   height: 100%;
+}
+.game__play-display__head {
+  display: flex;
+  justify-content: space-between;
+}
+.game__play-display--finish {
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+.game__play-display__slot {
+  display: flex;
+  gap: 20px;
+  margin: 40px auto 20px;
+  padding: 40px 20px;
+  max-width: 760px;
+  height: 160px;
+  justify-content: center;
+  background-color: #3da9fc;
+  border-radius: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Yuji Syuku", serif;
+}
+.game__play-display__slot__left {
+  display: flex;
+  max-width: 367px;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 16px;
+}
+.game__play-display__slot__right {
+  display: flex;
+  max-width: 367px;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 16px;
+}
+.game__play-display__button {
+  display: flex;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 0px 20px;
+  max-width: 760px;
+  justify-content: center;
+}
+.game__play-display__button button {
+  width: 120px;
+  height: 80px;
+  background-color: #ef4565;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+.game__play-display__button__left {
+  display: flex;
+  max-width: 367px;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.game__play-display__button__right {
+  display: flex;
+  max-width: 367px;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
 }
 
 .game__finish-display {
