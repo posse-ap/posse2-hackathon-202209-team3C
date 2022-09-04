@@ -2,14 +2,17 @@
 @use "../global/mixin" as m;
 
 body {
+  position: relative;
+  height: 100vh;
   font-family: "M PLUS 1p", sans-serif;
   color: v.$font-color;
+  z-index: -3;
 }
 
 .container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-image: url("../../img/main_bg.jpeg");
   z-index: -2;
 
