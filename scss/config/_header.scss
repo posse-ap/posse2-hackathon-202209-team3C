@@ -10,14 +10,12 @@
 
   &__title {
     position: relative;
-    // background: v.$button-color;
     width: 200px;
     height: calc(100% - 8px);
     line-height: 100px;
     font-size: 24px;
     text-align: center;
     border: solid 4px v.$blue;
-    // color: v.$white;
 
     &::after {
       position: absolute;
