@@ -1,0 +1,76 @@
+@use "../global/variables" as v;
+@use "../global/mixin" as m;
+
+.game {
+  &__rule {
+    &__container {
+      max-width: 434px;
+      width: 50%;
+      height: 420px;
+      // background-color: v.$blue;
+      background-color: v.$blackboard-color;
+      border: solid 8px v.$blackboard-border-color;
+      border-radius: 5px;
+      position: relative;
+    }
+    &__chalk__1::before,
+    &__chalk__1::after,
+    &__chalk__2::before,
+    &__chalk__2::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+    }
+    &__chalk__1::before {
+      width: 5%;
+      right: 10%;
+      border: solid 3px v.$chalk-red-color;
+      border-radius: 4px 4px 3px 4px;
+    }
+    &__chalk__1::after {
+      width: 5%;
+      right: 50%;
+      border: solid 3px v.$white;
+      border-radius: 2px;
+    }
+    &__chalk__2::before {
+      width: 4%;
+      left: 10%;
+      border: solid 3px v.$chalk-blue-color;
+      border-radius: 3px 0;
+    }
+    &__chalk__2::after {
+      width: 6%;
+      left: 25%;
+      border: solid 3px v.$chalk-yellow-color;
+      border-radius: 0 0 3px 3px;
+    }
+    &__eraser__1::before,
+    &__eraser__1::after,
+    &__eraser__2::before {
+      position: absolute;
+      content: "";
+    }
+    &__eraser__1::before {
+      bottom: 0;
+      width: 10%;
+      right: 30%;
+      border: solid 10px v.$eraser-under-color;
+      border-radius: 1px 5px;
+    }
+    &__eraser__1::after {
+      bottom: 20px;
+      width: 13%;
+      right: 30%;
+      border: solid 5px v.$eraser-top-color;
+      border-radius: 1px;
+    }
+    &__eraser__2::before {
+      bottom: 20px;
+      height: 1%;
+      right: 36%;
+      border: solid 5px v.$black;
+      border-radius: 1px;
+    }
+  }
+}
