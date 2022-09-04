@@ -3,21 +3,36 @@
 
 .header {
   width: 100%;
-  height: 80px;
   background-color: v.$light-blue;
 
   &__inner {
     width: 100%;
     height: 100%;
     display: flex;
+    overflow: hidden;
+
+    &__slider {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      animation: slider 20s 2s linear infinite;
+
+      &__text {
+        width: 20vw;
+        font-size: 24px;
+        padding: 10px;
+        font-weight: bold;
+      }
+      &__text-title {
+        font-size: 28px;
+        color: rgb(207, 44, 131);
+      }
+    }
   }
 
-  &__slider {
-    display: inline-flex;
-    width: 100%;
-    height: 100%;
-    animation: slider 10s 2s linear infinite;
-  }
   @keyframes slider {
     0% {
       transform: translateX(0%);
