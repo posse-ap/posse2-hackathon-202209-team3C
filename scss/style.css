@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -443,30 +444,41 @@ button {
   height: 100%;
 }
 
+.game__blackboard {
+  position: relative;
+  width: 50%;
+}
 .game__blackboard__container {
   max-width: 434px;
-  width: 50%;
   height: 420px;
+  padding: 0 10px 10px;
   background-color: #006400;
   border: solid 8px #b8860b;
   border-radius: 5px;
   position: relative;
+  overflow-y: scroll;
+  line-height: 1.5;
 }
 .game__blackboard__chalk__1::before, .game__blackboard__chalk__1::after, .game__blackboard__chalk__2::before, .game__blackboard__chalk__2::after {
   position: absolute;
   content: "";
-  bottom: 0;
+  bottom: 1.5%;
+  z-index: 10;
 }
 .game__blackboard__chalk__1::before {
   width: 5%;
   right: 10%;
+<<<<<<< HEAD
   border: solid 3px #f00;
+=======
+  border: solid 3px #fff;
+>>>>>>> origin/feature/4/yamato
   border-radius: 4px;
 }
 .game__blackboard__chalk__1::after {
   width: 5%;
   right: 50%;
-  border: solid 3px #fff;
+  border: solid 3px #f00;
   border-radius: 2px;
 }
 .game__blackboard__chalk__2::before {
@@ -484,18 +496,27 @@ button {
 .game__blackboard__eraser__1::before, .game__blackboard__eraser__1::after, .game__blackboard__eraser__2::before {
   position: absolute;
   content: "";
+  z-index: 5;
 }
 .game__blackboard__eraser__1::before {
-  bottom: 0;
+  bottom: 1%;
   width: 10%;
   right: 30%;
   border: solid 10px #0000cd;
+<<<<<<< HEAD
   border-radius: 0 0 5px 5px;
+=======
+  border-radius: 0 0 3px 3px;
+>>>>>>> origin/feature/4/yamato
 }
 .game__blackboard__eraser__1::after {
   bottom: 20px;
   width: 13%;
+<<<<<<< HEAD
   right: 29.7%;
+=======
+  right: 29.5%;
+>>>>>>> origin/feature/4/yamato
   border: solid 5px #ffa500;
   border-radius: 1px;
 }
@@ -522,6 +543,38 @@ button {
 .game__blackboard__btn:hover {
   opacity: 0.7;
   color: #ff0;
+<<<<<<< HEAD
+=======
+  border-color: #ff0;
+}
+.game__blackboard__title {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  color: #fff;
+  background-color: #006400;
+  font-size: 40px;
+}
+.game__blackboard__rule {
+  margin-top: 10%;
+  font-size: 30px;
+  color: #fff;
+}
+.game__blackboard__rule__title {
+  text-align: center;
+}
+.game__blackboard__rule__text::before {
+  content: "・";
+}
+.game__blackboard__rule__red {
+  color: #f00;
+}
+.game__blackboard__rule__blue {
+  color: #1e90ff;
+}
+.game__blackboard__rule__yellow {
+  color: #ff0;
+>>>>>>> origin/feature/4/yamato
 }
 
 .js-none {

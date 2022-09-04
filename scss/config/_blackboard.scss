@@ -3,15 +3,20 @@
 
 .game {
   &__blackboard {
+    position: relative;
+    width: 50%;
     &__container {
       max-width: 434px;
-      width: 50%;
+      // width: 50%;
       height: 420px;
+      padding: 0 10px 10px;
       // background-color: v.$blue;
       background-color: v.$blackboard-color;
       border: solid 8px v.$blackboard-border-color;
       border-radius: 5px;
       position: relative;
+      overflow-y: scroll;
+      line-height: 1.5;
     }
     &__chalk__1::before,
     &__chalk__1::after,
@@ -19,18 +24,19 @@
     &__chalk__2::after {
       position: absolute;
       content: "";
-      bottom: 0;
+      bottom: 1.5%;
+      z-index: 10;
     }
     &__chalk__1::before {
       width: 5%;
       right: 10%;
       border: solid 3px v.$chalk-red-color;
-      border-radius: 4px;
+      border-radius: 4px 4px 3px 4px;
     }
     &__chalk__1::after {
       width: 5%;
       right: 50%;
-      border: solid 3px v.$white;
+      border: solid 3px v.$chalk-red-color;
       border-radius: 2px;
     }
     &__chalk__2::before {
@@ -50,18 +56,19 @@
     &__eraser__2::before {
       position: absolute;
       content: "";
+      z-index: 5;
     }
     &__eraser__1::before {
-      bottom: 0;
+      bottom: 1%;
       width: 10%;
       right: 30%;
       border: solid 10px v.$eraser-under-color;
-      border-radius: 0 0 5px 5px;
+      border-radius: 1px 5px;
     }
     &__eraser__1::after {
       bottom: 20px;
       width: 13%;
-      right: 29.7%;
+      right: 30%;
       border: solid 5px v.$eraser-top-color;
       border-radius: 1px;
     }
@@ -71,25 +78,6 @@
       right: 36%;
       border: solid 5px v.$black;
       border-radius: 1px;
-    }
-    &__btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 80%;
-      height: 60%;
-      margin: calc(40% / 2) auto;
-      background-color: v.$blackboard-color;
-      color: v.$white;
-      font-size: 50px;
-      // border: solid 5px v.$blackboard-color;
-      border: solid 3px v.$white;
-      cursor: pointer;
-
-      &:hover {
-        opacity: 0.7;
-        color: v.$chalk-yellow-color;
-      }
     }
   }
 }
