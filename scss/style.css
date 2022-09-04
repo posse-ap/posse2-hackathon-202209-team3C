@@ -564,4 +564,8 @@ button {
 
 .js-none {
   display: none;
+}
+
+.js-clicked {
+  opacity: 0.5;
 }/*# sourceMappingURL=style.css.map */

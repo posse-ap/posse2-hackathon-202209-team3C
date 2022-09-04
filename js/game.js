@@ -14,7 +14,6 @@
         themeInputValues.push(input.value);
       }
     });
-    console.log(themeInputValues);
   }
 
   themeDisplayButton.addEventListener("click", () => {
@@ -23,6 +22,7 @@
 
   // スロット
   // スロットパネルのクラス
+  let clickCount = 0;
   class Panel {
     constructor() {
       const slotPanel = document.createElement("div");
@@ -38,8 +38,17 @@
 
       this.stop = document.createElement("button");
       this.stop.textContent = "STOP";
+
       this.stop.classList.add("game__play-display__slot__button");
       this.stop.addEventListener("click", () => {
+        if (this.stop.classList.contains("js-clicked")) {
+          return;
+        }
+        this.stop.classList.add("js-clicked");
+        clickCount++;
+        if (clickCount == 2) {
+          spin.classList.remove("js-clicked");
+        }
         clearTimeout(this.timeoutId);
       });
 
@@ -49,6 +58,10 @@
 
       const main = document.getElementById("slot");
       main.appendChild(slotPanel);
+    }
+
+    removeJsClicked() {
+      this.stop.classList.remove("js-clicked");
     }
 
     getRandomText(array) {
@@ -71,6 +84,14 @@
   const instructions = ["aaa", "bbb", "ccc"];
   const spin = document.getElementById("spin");
   spin.addEventListener("click", () => {
+    if (spin.classList.contains("js-clicked")) {
+      return;
+    }
+    spin.classList.add("js-clicked");
+    clickCount = 0;
+    panels.forEach((panel) => {
+      panel.removeJsClicked();
+    });
     panels[0].spin(themes);
     panels[1].spin(instructions);
   });
