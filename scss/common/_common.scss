@@ -7,6 +7,11 @@ body {
   font-family: "M PLUS 1p", sans-serif;
   color: v.$font-color;
   z-index: -3;
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
 }
 
 .container {
