@@ -52,20 +52,13 @@
   align-items: center;
 
   &__container {
+    display: flex;
     max-width: 434px;
     width: 50%;
     height: 420px;
-    text-align: center;
-  }
-
-  &__title {
-    padding: 80px 0;
-  }
-
-  &__input {
-    margin: 16px auto 40px;
-    font-size: 20px;
-    z-index: 12;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
   }
 }
 
@@ -124,7 +117,7 @@
   }
 
   &__slot {
-    margin: 40px auto 20px;
+    margin: 40px auto 0px;
     padding: 40px 40px;
     text-align: center;
     border: solid 4px v.$white;
@@ -194,5 +187,47 @@
 
 // finish-display
 .game__finish-display {
+  gap: 20px;
   height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    max-width: 434px;
+    width: 50%;
+    height: 420px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 20px;
+  }
+
+  &__input {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 24px;
+    border: solid 4px v.$blue;
+    border-radius: 16px;
+
+    &__button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: v.$red;
+      border: none;
+      border-radius: 16px;
+      font-size: 20px;
+      font-weight: bold;
+      color: v.$white;
+      box-shadow: 0px 4px 4px rgba($color: v.$black, $alpha: 0.6);
+      text-align: center;
+    }
+  }
 }

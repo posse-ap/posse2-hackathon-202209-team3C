@@ -91,11 +91,6 @@
               </div>
                 <div class="game__start-display__container">
                 <h1 class="game__title game__start-display__title">コミもく</h1>
-                <p class="game__text">名前を入力してね！</p>
-                <input
-                  type="text"
-                  class="game__input game__start-display__input"
-                />
                 <button
                   class="game__button game__start__button"
                   id="start-display-button"
@@ -169,8 +164,37 @@
             <!-- end game__play-display -->
 
             <!-- start game__finish-display -->
-            <div class="game__finish-display"></div>
+            <div class="game__finish-display js-none" id="finish-display">
+              <div class="game__blackboard">
+                <span class="game__blackboard__chalk__1"></span>
+                <span class="game__blackboard__chalk__2"></span>
+                <span class="game__blackboard__eraser__1"></span>
+                <span class="game__blackboard__eraser__2"></span>
+                <div class="game__blackboard__container">
+                  <p class="game__blackboard__title">今回のお題</p>
+                  <div class="game__blackboard__rule">
+                    <p class="game__blackboard__rule__title">お題が入ります</p>
+                  </div>
+                </div>
+              </div>
+              <div class="game__finish-display__container">
+                <!-- <h1 class="game__title game__finish-display__title">コミもく</h1> -->
+                <div class="game__finish-display__input__container">
+                  <p class="game__finish-display__text">今回のゲーム中の名言は？</p>
+                  <input type="text" class="game__finish-display__input">
+                  <button class="game__finish-display__input__button">確定する</button>
+                </div>
+                <p class="game__finish-display__text">
+                  今回のお題をリセットせずに続けますか？
+                  <input type="checkbox">
+                </p>
+                <button class="game__button game__finish__button" id="finish-display-button">
+                  トップに戻る
+                </button>
+              </div>
+            </div>
             <!-- end game__finish-display -->
+
           </div>
         </section>
       </main>
