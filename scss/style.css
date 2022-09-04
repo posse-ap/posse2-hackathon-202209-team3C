@@ -222,12 +222,6 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.game__rule__container {
-  max-width: 434px;
-  width: 50%;
-  height: 420px;
-  background-color: #90b4ce;
-}
 .game__start__container {
   max-width: 434px;
   width: 50%;
@@ -260,4 +254,68 @@ body {
   border: none;
   border-radius: 30px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.game__rule__container {
+  max-width: 434px;
+  width: 50%;
+  height: 420px;
+  background-color: #006400;
+  border: solid 8px #b8860b;
+  border-radius: 5px;
+  position: relative;
+}
+.game__rule__chalk__1::before, .game__rule__chalk__1::after, .game__rule__chalk__2::before, .game__rule__chalk__2::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+}
+.game__rule__chalk__1::before {
+  width: 5%;
+  right: 10%;
+  border: solid 3px #f00;
+  border-radius: 4px 4px 3px 4px;
+}
+.game__rule__chalk__1::after {
+  width: 5%;
+  right: 50%;
+  border: solid 3px #fff;
+  border-radius: 2px;
+}
+.game__rule__chalk__2::before {
+  width: 4%;
+  left: 10%;
+  border: solid 3px #1e90ff;
+  border-radius: 3px 0;
+}
+.game__rule__chalk__2::after {
+  width: 6%;
+  left: 25%;
+  border: solid 3px #ff0;
+  border-radius: 0 0 3px 3px;
+}
+.game__rule__eraser__1::before, .game__rule__eraser__1::after, .game__rule__eraser__2::before {
+  position: absolute;
+  content: "";
+}
+.game__rule__eraser__1::before {
+  bottom: 0;
+  width: 10%;
+  right: 30%;
+  border: solid 10px #0000cd;
+  border-radius: 1px 5px;
+}
+.game__rule__eraser__1::after {
+  bottom: 20px;
+  width: 13%;
+  right: 30%;
+  border: solid 5px #ffa500;
+  border-radius: 1px;
+}
+.game__rule__eraser__2::before {
+  bottom: 20px;
+  height: 1%;
+  right: 36%;
+  border: solid 5px #000;
+  border-radius: 1px;
 }/*# sourceMappingURL=style.css.map */
