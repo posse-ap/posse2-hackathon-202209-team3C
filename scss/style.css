@@ -209,13 +209,26 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
+  overflow: hidden;
 }
-.header__slider {
-  display: inline-flex;
+.header__inner__slider {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
   width: 100%;
   height: 100%;
-  -webkit-animation: slider 10s 2s linear infinite;
-          animation: slider 10s 2s linear infinite;
+  -webkit-animation: slider 20s 2s linear infinite;
+          animation: slider 20s 2s linear infinite;
+}
+.header__inner__slider__text {
+  width: 20vw;
+  font-size: 25px;
+  padding: 10px;
+  font-weight: 900;
+}
+.header__inner__slider__text-title {
+  font-size: 30px;
+  color: rgb(207, 44, 131);
 }
 @-webkit-keyframes slider {
   0% {
