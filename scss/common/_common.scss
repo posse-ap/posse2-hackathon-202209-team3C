@@ -63,7 +63,7 @@ button {
 
   &__box {
     display: flex;
-    gap: 3rem;
+    gap: 40px;
     align-items: center;
     justify-content: start;
     pointer-events: none;
@@ -71,8 +71,12 @@ button {
 
   &__font {
     display: block;
-    font-size: 5rem;
+    font-size: 80px;
     font-weight: bold;
     color: v.$white;
+
+    @include m.mq(sp) {
+      font-size: 36px;
+    }
   }
 }

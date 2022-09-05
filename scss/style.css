@@ -234,16 +234,21 @@ button {
 }
 .loader__box {
   display: flex;
-  gap: 3rem;
+  gap: 40px;
   align-items: center;
   justify-content: start;
   pointer-events: none;
 }
 .loader__font {
   display: block;
-  font-size: 5rem;
+  font-size: 80px;
   font-weight: bold;
   color: #fff;
+}
+@media screen and (max-width: 375px) {
+  .loader__font {
+    font-size: 36px;
+  }
 }
 
 .header {
@@ -298,7 +303,7 @@ button {
 }
 .header__inner__slider__text {
   width: 20vw;
-  font-size: 24px;
+  font-size: 20px;
   padding: 10px;
   font-weight: bold;
 }
