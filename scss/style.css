@@ -212,6 +212,7 @@ button {
 @media screen and (max-width: 375px) {
   .container {
     height: auto;
+    overflow: hidden;
   }
 }
 
@@ -234,16 +235,21 @@ button {
 }
 .loader__box {
   display: flex;
-  gap: 3rem;
+  gap: 40px;
   align-items: center;
   justify-content: start;
   pointer-events: none;
 }
 .loader__font {
   display: block;
-  font-size: 5rem;
+  font-size: 80px;
   font-weight: bold;
   color: #fff;
+}
+@media screen and (max-width: 375px) {
+  .loader__font {
+    font-size: 36px;
+  }
 }
 
 .header {
@@ -298,7 +304,7 @@ button {
 }
 .header__inner__slider__text {
   width: 20vw;
-  font-size: 24px;
+  font-size: 20px;
   padding: 10px;
   font-weight: bold;
 }
@@ -477,25 +483,22 @@ button {
   display: none;
   height: 100%;
 }
-@media screen and (max-width: 375px) {
-  .game__theme-display {
-    margin: 10% 5%;
-  }
-}
 .game__theme-display__head {
   display: flex;
+  padding-bottom: 40px;
   justify-content: space-between;
+  align-items: center;
 }
 @media screen and (max-width: 375px) {
   .game__theme-display__head {
-    flex-direction: column;
+    padding: 20px 20px;
   }
 }
 .game__theme-display--return {
+  position: absolute;
   display: flex;
   align-items: center;
-  padding: 0 10px;
-  height: 3rem;
+  padding: 10px;
   font-weight: bold;
   font-size: 20px;
   border: solid 2px #094067;
@@ -509,17 +512,21 @@ button {
 }
 @media screen and (max-width: 375px) {
   .game__theme-display--return {
-    width: 35%;
+    position: static;
+    height: 20px;
   }
 }
 .game__theme-display__title {
-  padding-bottom: 40px;
-  margin-right: 28vw;
+  margin: 0 auto;
 }
 @media screen and (max-width: 375px) {
   .game__theme-display__title {
-    margin: 20px auto 0;
+    font-size: 24px;
+    margin: 0;
   }
+}
+.game__theme-display__text {
+  padding-left: 20px;
 }
 .game__theme-display__input__container {
   display: flex;
@@ -564,14 +571,17 @@ button {
   }
 }
 .game__play-display__title {
-  margin-left: 25vw;
+  margin: 0 auto;
 }
 @media screen and (max-width: 375px) {
   .game__play-display__title {
+    margin-top: 8px;
     font-size: 28px;
   }
 }
 .game__play-display--finish {
+  position: absolute;
+  right: 40px;
   padding: 10px;
   font-weight: bold;
   font-size: 20px;
@@ -579,15 +589,15 @@ button {
   border-radius: 10px;
   cursor: pointer;
 }
+@media screen and (max-width: 375px) {
+  .game__play-display--finish {
+    position: static;
+  }
+}
 .game__play-display--finish:hover {
   color: #e3f6f5;
   background-color: #094067;
   border: solid 2px #094067;
-}
-@media screen and (max-width: 375px) {
-  .game__play-display--finish {
-    display: none;
-  }
 }
 .game__play-display--finish__sp {
   display: none;
