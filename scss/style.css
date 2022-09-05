@@ -361,11 +361,9 @@ button {
   max-width: 434px;
   width: 50%;
   height: 420px;
-<<<<<<< HEAD
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-=======
   text-align: center;
 }
 @media screen and (max-width: 375px) {
@@ -399,7 +397,6 @@ button {
   margin: 16px auto 40px;
   font-size: 20px;
   z-index: 12;
->>>>>>> origin/feature/5/yamato
 }
 .game__start-display__button {
   width: 90%;

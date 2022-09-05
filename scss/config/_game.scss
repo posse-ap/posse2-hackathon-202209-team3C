@@ -81,11 +81,10 @@
     max-width: 434px;
     width: 50%;
     height: 420px;
-<<<<<<< HEAD
+
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-=======
     text-align: center;
 
     @include m.mq(sp) {
@@ -119,7 +118,6 @@
     margin: 16px auto 40px;
     font-size: 20px;
     z-index: 12;
->>>>>>> origin/feature/5/yamato
   }
 
   &__button {
