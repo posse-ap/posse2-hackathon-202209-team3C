@@ -97,7 +97,7 @@
       this.textBox.classList.add("game__play-display__slot__text-box");
 
       this.text = document.createElement("p");
-      this.text.textContent = "Lets spin!";
+      this.text.textContent = "Let's spin!";
 
       this.timeoutId = undefined;
 
@@ -164,8 +164,11 @@
   // リセットボタンを押したら、"inputThemes"キーの値を削除する
   const themeResetButton = document.getElementById("theme-reset-button");
   themeResetButton.addEventListener("click", () => {
-    localStorage.removeItem("inputThemes");
-    location.reload();
+    const result = window.confirm("本当にリセットしますか？");
+    if (result) {
+      localStorage.removeItem("inputThemes");
+      location.reload();
+    }
   });
 
   // 確定ボタンを押したら、名言がストレージに保存される
@@ -186,6 +189,7 @@
   // 保存ボタンを押したら、themeInputValuesがストレージに保存される
   const keepThemesButton = document.getElementById("keep-themes-button");
   keepThemesButton.addEventListener("click", () => {
+    keepThemesButton.classList.add("js-clicked");
     let keepThemesJson = JSON.stringify(themeInputValues);
     localStorage.setItem("inputThemes", keepThemesJson);
   });

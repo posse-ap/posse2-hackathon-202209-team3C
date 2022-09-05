@@ -164,26 +164,22 @@
   display: none;
   height: 100%;
 
-  @include m.mq(sp) {
-    margin: 10% 5%;
-  }
-
   &__head {
     display: flex;
+    padding-bottom: 40px;
     justify-content: space-between;
+    align-items: center;
 
     @include m.mq(sp) {
-      // position: relative;
-      // margin-bottom: 25%;
-      flex-direction: column;
+      padding: 20px 20px;
     }
   }
 
   &--return {
+    position: absolute;
     display: flex;
     align-items: center;
-    padding: 0 10px;
-    height: 3rem;
+    padding: 10px;
     font-weight: bold;
     font-size: 20px;
     border: solid 2px v.$font-color;
@@ -197,17 +193,22 @@
     }
 
     @include m.mq(sp) {
-      width: 35%;
+      position: static;
+      height: 20px;
     }
   }
 
   &__title {
-    padding-bottom: 40px;
-    margin-right: 28vw;
+    margin: 0 auto;
 
     @include m.mq(sp) {
-      margin: 20px auto 0;
+      font-size: 24px;
+      margin: 0;
     }
+  }
+
+  &__text {
+    padding-left: 20px;
   }
 
   &__input__container {
@@ -250,14 +251,17 @@
   }
 
   &__title {
-    margin-left: 25vw;
+    margin: 0 auto;
 
     @include m.mq(sp) {
+      margin-top: 8px;
       font-size: 28px;
     }
   }
 
   &--finish {
+    position: absolute;
+    right: 40px;
     padding: 10px;
     font-weight: bold;
     font-size: 20px;
@@ -265,14 +269,14 @@
     border-radius: 10px;
     cursor: pointer;
 
+    @include m.mq(sp) {
+      position: static;
+    }
+
     &:hover {
       color: v.$light-blue;
       background-color: v.$font-color;
       border: solid 2px v.$font-color;
-    }
-
-    @include m.mq(sp) {
-      display: none;
     }
 
     &__sp {
@@ -425,7 +429,7 @@
 
   &__text {
     font-size: 24px;
-    
+
     &__keep {
       width: 200%;
     }
