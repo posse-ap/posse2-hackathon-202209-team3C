@@ -7,13 +7,11 @@
     <title>コミもく</title>
 
     <link rel="stylesheet" href="./scss/style.css" />
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Plus+Jakarta+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/6c20dffe37.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,6 +22,16 @@
   </head>
 
   <body>
+    <!-- loader -->
+    <div class="loader">
+      <div class="loader__box">
+        <span class="loader__font">コ</span>
+        <span class="loader__font">ミ</span>
+        <span class="loader__font">も</span>
+        <span class="loader__font">く</span>
+      </div>
+    </div>
+
     <div class="container">
       <!-- start header -->
 
@@ -33,30 +41,12 @@
           <div
             class="header__inner__slider header__inner__slider--one"
             id="slider-one"
-          >
-            <!-- <p class="header__inner__slider__text">
-              やまとラーメン好きってわけではないのか
-            </p>
-            <p class="header__inner__slider__text">寝不足で草</p>
-            <p class="header__inner__slider__text">
-              ステーキ美味しいよね！マッスルマッスル
-            </p>
-            <p class="header__inner__slider__text">まりじん</p> -->
-          </div>
+          ></div>
 
           <div
             class="header__inner__slider header__inner__slider--two"
             id="slider-two"
-          >
-            <!-- <p class="header__inner__slider__text">
-              やまとラーメン好きってわけではないのか
-            </p>
-            <p class="header__inner__slider__text">寝不足で草</p>
-            <p class="header__inner__slider__text">
-              ステーキ美味しいよね！マッスルマッスル
-            </p>
-            <p class="header__inner__slider__text">まりじん</p> -->
-          </div>
+          ></div>
         </div>
       </header>
 
@@ -151,10 +141,10 @@
             <!-- start game__theme-display -->
             <div class="game__theme-display" id="theme-display">
               <div class="game__theme-display__head">
-                <h1 class="game__title game__theme-display__title">コミもく</h1>
                 <div class="game__theme-display--return" id="return">
-                  やり直す
+                  &lt; やり直す
                 </div>
+                <h1 class="game__title game__theme-display__title">コミもく</h1>
               </div>
               <p class="game__text">お題を入力してね！(16文字以内)</p>
               <div class="game__theme-display__input__container">
@@ -190,16 +180,12 @@
             </div>
             <!-- end game__theme-display -->
 
-            <!-- start game__load-display -->
-            <div class="game__load-display"></div>
-            <!-- end game__load-display -->
-
             <!-- start game__play-display -->
             <div class="game__play-display js-none" id="play-display">
               <div class="game__play-display__head">
                 <h1 class="game__title game__play-display__title">コミもく</h1>
                 <div class="game__play-display--finish" id="finish">
-                  終了する
+                  終了する &raquo;
                 </div>
               </div>
               <div class="game__play-display__slot">
@@ -207,6 +193,12 @@
                   SPIN
                 </button>
                 <div class="game__play-display__slot__inner" id="slot"></div>
+              </div>
+              <div
+                class="game__play-display--finish game__play-display--finish__sp"
+                id="finish-sp"
+              >
+                終了する &raquo;
               </div>
             </div>
             <!-- end game__play-display -->
@@ -236,11 +228,16 @@
                     class="game__finish-display__input"
                     id="famous-quote-input"
                   />
-                  <button class="game__finish-display__input__button">
+                  <button
+                    class="game__finish-display__input__button"
+                    id="famous-quote-button"
+                  >
                     確定する
                   </button>
                 </div>
-                <p class="game__finish-display__text">
+                <p
+                  class="game__finish-display__text game__finish-display__text__keep"
+                >
                   今回のお題を保存しますか？
                   <button
                     class="game__finish-display__input__button"
@@ -262,6 +259,9 @@
         </section>
       </main>
     </div>
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <!-- javascript -->
     <script src="./js/main.js"></script>
     <script src="./js/game.js"></script>

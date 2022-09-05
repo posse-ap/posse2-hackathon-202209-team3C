@@ -38,14 +38,26 @@
     "をかわいこぶって話して！",
   ];
 
+  // 名言を格納
   const sliderOne = document.getElementById("slider-one");
   const sliderTwo = document.getElementById("slider-two");
-  const defaultFamousQuotes = [
-    "寝不足は草",
-    " ステーキ美味しいよね！マッスルマッスル",
-    "まりじん",
-    "やまとラーメン好きってわけではないのか",
-  ];
+  let famousQuoteValues = [];
+  if (JSON.parse(localStorage.getItem("FamousQuotes"))) {
+    famousQuoteValues = JSON.parse(localStorage.getItem("FamousQuotes"));
+    console.log(famousQuoteValues);
+  }
+
+  // 名言を獲得し、ヘッダーにセットする
+  function createFamousQuotes(place) {
+    famousQuoteValues.forEach((element) => {
+      const famousQuoteElement = document.createElement("p");
+      famousQuoteElement.classList.add("header__inner__slider__text");
+      famousQuoteElement.textContent = element;
+      place.appendChild(famousQuoteElement);
+    });
+  }
+  createFamousQuotes(sliderOne);
+  createFamousQuotes(sliderTwo);
 
   // inputの値を配列にする関数
   function getValue() {
@@ -72,19 +84,6 @@
   themeDisplayButton.addEventListener("click", () => {
     getValue();
   });
-
-  // 名言を獲得し、ヘッダーにセットする
-  function createFamousQuotes(place) {
-    defaultFamousQuotes.forEach((element) => {
-      const famousQuoteElement = document.createElement("p");
-      famousQuoteElement.classList.add("header__inner__slider__text");
-      famousQuoteElement.textContent = element;
-      place.appendChild(famousQuoteElement);
-    });
-  }
-
-  createFamousQuotes(sliderOne);
-  createFamousQuotes(sliderTwo);
 
   // スロット
   // スロットパネルのクラス
@@ -167,6 +166,21 @@
   themeResetButton.addEventListener("click", () => {
     localStorage.removeItem("inputThemes");
     location.reload();
+  });
+
+  // 確定ボタンを押したら、名言がストレージに保存される
+  const famousQuoteInput = document.getElementById("famous-quote-input");
+  const famousQuoteButton = document.getElementById("famous-quote-button");
+  famousQuoteButton.addEventListener("click", () => {
+    famousQuoteValues.push(famousQuoteInput.value);
+    if (famousQuoteValues.length > 6) {
+      famousQuoteValues.shift();
+    }
+    let keepFamousQuoteJson = JSON.stringify(famousQuoteValues);
+    localStorage.setItem("FamousQuotes", keepFamousQuoteJson);
+    famousQuoteButton.disabled = true;
+    famousQuoteButton.classList.add("js-clicked");
+    famousQuoteInput.classList.add("js-clicked");
   });
 
   // 保存ボタンを押したら、themeInputValuesがストレージに保存される

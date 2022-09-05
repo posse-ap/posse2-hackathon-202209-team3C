@@ -11,6 +11,7 @@
 }
 
 .game {
+  position: relative;
   margin: 0 auto;
   max-width: 988px;
   border: solid 8px v.$white;
@@ -60,6 +61,12 @@
     border-radius: 30px;
     box-shadow: 0px 4px 4px rgba($color: v.$black, $alpha: 0.5);
     cursor: pointer;
+
+    &:hover {
+      color: v.$button-color;
+      background-color: v.$white;
+      border: solid 3px v.$button-color;
+    }
   }
 }
 
@@ -131,16 +138,23 @@
     width: 90%;
 
     &--reset {
-      margin: 0px auto 20px;
+      margin: 10px auto 20px;
       padding: 10px 20px;
       background-color: v.$red;
-      border: none;
+      // border: none;
+      border: solid 3px v.$red;
       border-radius: 16px;
       font-size: 20px;
       font-weight: bold;
       color: v.$white;
       box-shadow: 0px 4px 4px rgba($color: v.$black, $alpha: 0.6);
       text-align: center;
+
+      &:hover {
+        background-color: v.$white;
+        color: v.$red;
+        border: solid 3px v.$red;
+      }
     }
   }
 }
@@ -157,24 +171,42 @@
   &__head {
     display: flex;
     justify-content: space-between;
+
+    @include m.mq(sp) {
+      // position: relative;
+      // margin-bottom: 25%;
+      flex-direction: column;
+    }
   }
 
   &--return {
-    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    height: 3rem;
     font-weight: bold;
     font-size: 20px;
+    border: solid 2px v.$font-color;
+    border-radius: 10px;
     cursor: pointer;
 
+    &:hover {
+      color: v.$light-blue;
+      background-color: v.$font-color;
+      border: solid 2px v.$font-color;
+    }
+
     @include m.mq(sp) {
-      padding-top: 5px;
+      width: 35%;
     }
   }
 
   &__title {
     padding-bottom: 40px;
+    margin-right: 28vw;
 
     @include m.mq(sp) {
-      font-size: 28px;
+      margin: 20px auto 0;
     }
   }
 
@@ -199,12 +231,6 @@
   }
 }
 
-// load-display
-// .game__load-display {
-//   display: none;
-//   height: 100%;
-// }
-
 // play-display
 .game__play-display {
   display: none;
@@ -224,19 +250,52 @@
   }
 
   &__title {
+    margin-left: 25vw;
+
     @include m.mq(sp) {
       font-size: 28px;
     }
   }
 
   &--finish {
-    padding-top: 10px;
+    padding: 10px;
     font-weight: bold;
     font-size: 20px;
+    border: solid 2px v.$font-color;
+    border-radius: 10px;
     cursor: pointer;
 
+    &:hover {
+      color: v.$light-blue;
+      background-color: v.$font-color;
+      border: solid 2px v.$font-color;
+    }
+
     @include m.mq(sp) {
-      padding-top: 5px;
+      display: none;
+    }
+
+    &__sp {
+      display: none;
+      width: 50%;
+      padding: 20px;
+      margin: 30px auto 0;
+      font-weight: bold;
+      font-size: 25px;
+      border: solid 5px v.$font-color;
+      border-radius: 30px;
+      text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        color: v.$light-blue;
+        background-color: v.$font-color;
+        border: solid 2px v.$font-color;
+      }
+
+      @include m.mq(sp) {
+        display: block;
+      }
     }
   }
 
@@ -262,6 +321,11 @@
       color: v.$font-color;
       background-color: v.$light-blue;
       border-radius: 16px;
+
+      &:hover {
+        color: v.$white;
+        background-color: v.$font-color;
+      }
     }
 
     &__inner {
@@ -320,6 +384,12 @@
       box-shadow: 0px 4px 4px rgba($color: v.$black, $alpha: 0.6);
       text-align: center;
 
+      &:hover {
+        background-color: v.$white;
+        color: v.$red;
+        border: solid 3px v.$red;
+      }
+
       @include m.mq(sp) {
         margin-top: 10px;
         width: 50%;
@@ -336,7 +406,7 @@
   height: 100%;
   justify-content: space-between;
   align-items: center;
-
+  padding-bottom: 20px;
   @include m.mq(sp) {
     flex-direction: column;
   }
@@ -355,8 +425,10 @@
 
   &__text {
     font-size: 24px;
-    // width: 100%;
-    // width: 80vw;
+    
+    &__keep {
+      width: 200%;
+    }
   }
 
   &__reset {
@@ -375,13 +447,19 @@
       margin: 20px auto;
       padding: 10px 20px;
       background-color: v.$red;
-      border: none;
+      border: solid 3px v.$red;
       border-radius: 16px;
       font-size: 20px;
       font-weight: bold;
       color: v.$white;
       box-shadow: 0px 4px 4px rgba($color: v.$black, $alpha: 0.6);
       text-align: center;
+
+      &:hover {
+        background-color: v.$white;
+        color: v.$red;
+        border: solid 3px v.$red;
+      }
 
       @include m.mq(sp) {
         width: 80%;
