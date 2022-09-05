@@ -6,6 +6,11 @@
     position: relative;
     width: 50%;
 
+    @include m.mq(sp) {
+      width: 90%;
+      margin: 10% 0;
+    }
+
     &__container {
       max-width: 434px;
       height: 420px;
@@ -78,6 +83,11 @@
       right: 29.5%;
       border: solid 5px v.$eraser-top-color;
       border-radius: 1px;
+
+      @include m.mq(sp) {
+        width: 13.5%;
+        right: 30%;
+      }
     }
 
     &__eraser__2::before {
@@ -117,12 +127,14 @@
     }
 
     &__rule {
-      margin-top: 10%;
+      margin: 10% 0;
       font-size: 20px;
       color: v.$white;
 
       &__title {
-        text-align: center;
+        display: inline-block;
+        margin: 0 auto;
+        background: linear-gradient(transparent 78%, v.$chalk-blue-color 0%);
       }
 
       &__text {
