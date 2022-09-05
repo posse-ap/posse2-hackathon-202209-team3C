@@ -271,7 +271,7 @@ button {
 }
 .header__inner__slider__text {
   width: 20vw;
-  font-size: 24px;
+  font-size: 20px;
   padding: 10px;
   font-weight: bold;
 }
@@ -335,6 +335,8 @@ button {
 }
 .game__title {
   font-size: 40px;
+  color: #094067;
+  text-shadow: -4px 8px 1px rgb(200, 211, 244), -3px 6px 1px rgb(211, 221, 247);
 }
 .game__text {
   font-weight: bold;
