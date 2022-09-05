@@ -46,3 +46,33 @@ button {
 .main {
   padding: 60px 40px;
 }
+
+// loader
+.loader {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: v.$button-color;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 100;
+
+  &__box {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: start;
+    pointer-events: none;
+  }
+
+  &__font {
+    display: block;
+    font-size: 5rem;
+    font-weight: bold;
+    color: v.$white;
+  }
+}

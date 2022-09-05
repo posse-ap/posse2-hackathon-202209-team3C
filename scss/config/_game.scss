@@ -11,6 +11,7 @@
 }
 
 .game {
+  position: relative;
   margin: 0 auto;
   max-width: 988px;
   border: solid 8px v.$white;
@@ -198,12 +199,6 @@
     }
   }
 }
-
-// load-display
-// .game__load-display {
-//   display: none;
-//   height: 100%;
-// }
 
 // play-display
 .game__play-display {

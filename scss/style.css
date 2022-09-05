@@ -219,6 +219,33 @@ button {
   padding: 60px 40px;
 }
 
+.loader {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #3da9fc;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 100;
+}
+.loader__box {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: start;
+  pointer-events: none;
+}
+.loader__font {
+  display: block;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
 .header {
   display: flex;
   height: 100px;
@@ -309,6 +336,7 @@ button {
 }
 
 .game {
+  position: relative;
   margin: 0 auto;
   max-width: 988px;
   border: solid 8px #fff;

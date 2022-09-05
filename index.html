@@ -7,13 +7,11 @@
     <title>コミもく</title>
 
     <link rel="stylesheet" href="./scss/style.css" />
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Plus+Jakarta+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/6c20dffe37.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,6 +22,16 @@
   </head>
 
   <body>
+    <!-- loader -->
+    <div class="loader">
+      <div class="loader__box">
+        <span class="loader__font">コ</span>
+        <span class="loader__font">ミ</span>
+        <span class="loader__font">も</span>
+        <span class="loader__font">く</span>
+      </div>
+    </div>
+
     <div class="container">
       <!-- start header -->
 
@@ -170,10 +178,6 @@
             </div>
             <!-- end game__theme-display -->
 
-            <!-- start game__load-display -->
-            <div class="game__load-display"></div>
-            <!-- end game__load-display -->
-
             <!-- start game__play-display -->
             <div class="game__play-display js-none" id="play-display">
               <div class="game__play-display__head">
@@ -245,6 +249,9 @@
         </section>
       </main>
     </div>
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <!-- javascript -->
     <script src="./js/main.js"></script>
     <script src="./js/game.js"></script>
