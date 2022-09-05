@@ -129,6 +129,10 @@
 .game__theme-display {
   height: 100%;
 
+  @include m.mq(sp) {
+    margin: 10% 5%;
+  }
+
   &__head {
     display: flex;
     justify-content: space-between;
@@ -143,6 +147,10 @@
 
   &__title {
     padding-bottom: 40px;
+
+    @include m.mq(sp) {
+      font-size: 28px;
+    }
   }
 
   &__input__container {
@@ -151,10 +159,18 @@
     padding: 20px 0 40px 0;
     justify-content: center;
     flex-wrap: wrap;
+
+    @include m.mq(sp) {
+      gap: 20px;
+    }
   }
 
   &__input {
     font-size: 32px;
+
+    @include m.mq(sp) {
+      width: 80%;
+    }
   }
 }
 

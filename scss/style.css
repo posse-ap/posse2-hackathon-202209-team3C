@@ -405,6 +405,11 @@ button {
 .game__theme-display {
   height: 100%;
 }
+@media screen and (max-width: 375px) {
+  .game__theme-display {
+    margin: 10% 5%;
+  }
+}
 .game__theme-display__head {
   display: flex;
   justify-content: space-between;
@@ -418,6 +423,11 @@ button {
 .game__theme-display__title {
   padding-bottom: 40px;
 }
+@media screen and (max-width: 375px) {
+  .game__theme-display__title {
+    font-size: 28px;
+  }
+}
 .game__theme-display__input__container {
   display: flex;
   gap: 40px;
@@ -425,8 +435,18 @@ button {
   justify-content: center;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 375px) {
+  .game__theme-display__input__container {
+    gap: 20px;
+  }
+}
 .game__theme-display__input {
   font-size: 32px;
+}
+@media screen and (max-width: 375px) {
+  .game__theme-display__input {
+    width: 80%;
+  }
 }
 
 .game__load-display {
