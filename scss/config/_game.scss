@@ -216,6 +216,9 @@
     padding: 20px 0 40px 0;
     justify-content: center;
     flex-wrap: wrap;
+    height: 230px;
+    margin: 3% 0;
+    overflow-y: scroll;
 
     @include m.mq(sp) {
       gap: 15px;
@@ -407,6 +410,7 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
+
   @include m.mq(sp) {
     flex-direction: column;
   }
@@ -441,6 +445,10 @@
     font-size: 24px;
     border: solid 4px v.$blue;
     border-radius: 16px;
+
+    @include m.mq(sp) {
+      font-size: 20px;
+    }
 
     &__button {
       display: block;

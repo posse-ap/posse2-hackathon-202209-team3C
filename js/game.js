@@ -194,4 +194,12 @@
   finishDisplayButton.addEventListener("click", () => {
     location.reload();
   });
+
+  const themeContainer = document.querySelector('.game__theme-display__input__container');
+  const themeInput = document.getElementById('game__theme-display__input');
+  const themesInput = themeInput.cloneNode(false);
+  for (let i = 0; i < 19; i++) {
+    const themesInput = themeInput.cloneNode(false);
+    themeContainer.appendChild(themesInput);
+  }
 }

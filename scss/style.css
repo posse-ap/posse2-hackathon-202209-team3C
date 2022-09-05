@@ -527,6 +527,9 @@ button {
   padding: 20px 0 40px 0;
   justify-content: center;
   flex-wrap: wrap;
+  height: 230px;
+  margin: 3% 0;
+  overflow-y: scroll;
 }
 @media screen and (max-width: 375px) {
   .game__theme-display__input__container {
@@ -743,6 +746,11 @@ button {
   font-size: 24px;
   border: solid 4px #90b4ce;
   border-radius: 16px;
+}
+@media screen and (max-width: 375px) {
+  .game__finish-display__input {
+    font-size: 20px;
+  }
 }
 .game__finish-display__input__button {
   display: block;
