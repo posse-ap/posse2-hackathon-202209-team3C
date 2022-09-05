@@ -1,9 +1,87 @@
 @use "../global/variables" as v;
 
-.js-none {
-  display: none;
+.js-block {
+  display: block;
+  animation: fadeIn 2s ;
+}
+
+.js-flex {
+  display: flex;
+  animation: fadeIn 2s ;
 }
 
 .js-clicked {
   opacity: 0.5;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  0% {
+            transform: translateY(-500px);
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+            transform: translateY(0);
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+            transform: translateY(-65px);
+            animation-timing-function: ease-in;
+  }
+  72% {
+            transform: translateY(0);
+            animation-timing-function: ease-out;
+  }
+  81% {
+            transform: translateY(-28px);
+            animation-timing-function: ease-in;
+  }
+  90% {
+            transform: translateY(0);
+            animation-timing-function: ease-out;
+  }
+  95% {
+            transform: translateY(-8px);
+            animation-timing-function: ease-in;
+  }
+  100% {
+            transform: translateY(0);
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes bounce-in-top {
+  0% {
+            transform: translateY(-500px);
+    opacity: 0;
+  }
+  38% {
+            transform: translateY(0);
+    opacity: 1;
+  }
+  55% {
+            transform: translateY(-50px);
+  }
+  72% {
+            transform: translateY(0);
+  }
+  81% {
+            transform: translateY(-36px);
+  }
+  90% {
+            transform: translateY(0);
+  }
+  95% {
+            transform: translateY(-16px);
+  }
+  100% {
+            transform: translateY(0);
+  }
 }
