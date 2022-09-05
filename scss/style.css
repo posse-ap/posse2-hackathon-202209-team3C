@@ -385,6 +385,11 @@ button {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
+.game__button:hover {
+  color: #3da9fc;
+  background-color: #fff;
+  border: solid 3px #3da9fc;
+}
 
 .game__start-display {
   display: none;
@@ -451,16 +456,21 @@ button {
   width: 90%;
 }
 .game__start-display__button--reset {
-  margin: 0px auto 20px;
+  margin: 10px auto 20px;
   padding: 10px 20px;
   background-color: #ef4565;
-  border: none;
+  border: solid 3px #ef4565;
   border-radius: 16px;
   font-size: 20px;
   font-weight: bold;
   color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
   text-align: center;
+}
+.game__start-display__button--reset:hover {
+  background-color: #fff;
+  color: #ef4565;
+  border: solid 3px #ef4565;
 }
 
 .game__theme-display {
@@ -476,23 +486,39 @@ button {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 375px) {
+  .game__theme-display__head {
+    flex-direction: column;
+  }
+}
 .game__theme-display--return {
-  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 3rem;
   font-weight: bold;
   font-size: 20px;
+  border: solid 2px #094067;
+  border-radius: 10px;
   cursor: pointer;
+}
+.game__theme-display--return:hover {
+  color: #e3f6f5;
+  background-color: #094067;
+  border: solid 2px #094067;
 }
 @media screen and (max-width: 375px) {
   .game__theme-display--return {
-    padding-top: 5px;
+    width: 35%;
   }
 }
 .game__theme-display__title {
   padding-bottom: 40px;
+  margin-right: 28vw;
 }
 @media screen and (max-width: 375px) {
   .game__theme-display__title {
-    font-size: 28px;
+    margin: 20px auto 0;
   }
 }
 .game__theme-display__input__container {
@@ -534,20 +560,52 @@ button {
     padding: 0 5%;
   }
 }
+.game__play-display__title {
+  margin-left: 25vw;
+}
 @media screen and (max-width: 375px) {
   .game__play-display__title {
     font-size: 28px;
   }
 }
 .game__play-display--finish {
-  padding-top: 10px;
+  padding: 10px;
   font-weight: bold;
   font-size: 20px;
+  border: solid 2px #094067;
+  border-radius: 10px;
   cursor: pointer;
+}
+.game__play-display--finish:hover {
+  color: #e3f6f5;
+  background-color: #094067;
+  border: solid 2px #094067;
 }
 @media screen and (max-width: 375px) {
   .game__play-display--finish {
-    padding-top: 5px;
+    display: none;
+  }
+}
+.game__play-display--finish__sp {
+  display: none;
+  width: 50%;
+  padding: 20px;
+  margin: 30px auto 0;
+  font-weight: bold;
+  font-size: 25px;
+  border: solid 5px #094067;
+  border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+.game__play-display--finish__sp:hover {
+  color: #e3f6f5;
+  background-color: #094067;
+  border: solid 2px #094067;
+}
+@media screen and (max-width: 375px) {
+  .game__play-display--finish__sp {
+    display: block;
   }
 }
 .game__play-display__slot {
@@ -573,6 +631,10 @@ button {
   color: #094067;
   background-color: #e3f6f5;
   border-radius: 16px;
+}
+.game__play-display__slot__spin:hover {
+  color: #fff;
+  background-color: #094067;
 }
 .game__play-display__slot__inner {
   display: flex;
@@ -629,6 +691,11 @@ button {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
   text-align: center;
 }
+.game__play-display__slot__button:hover {
+  background-color: #fff;
+  color: #ef4565;
+  border: solid 3px #ef4565;
+}
 @media screen and (max-width: 375px) {
   .game__play-display__slot__button {
     margin-top: 10px;
@@ -643,6 +710,7 @@ button {
   height: 100%;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 20px;
 }
 @media screen and (max-width: 375px) {
   .game__finish-display {
@@ -663,6 +731,9 @@ button {
 .game__finish-display__text {
   font-size: 24px;
 }
+.game__finish-display__text__keep {
+  width: 200%;
+}
 .game__finish-display__reset {
   width: 150%;
 }
@@ -678,13 +749,18 @@ button {
   margin: 20px auto;
   padding: 10px 20px;
   background-color: #ef4565;
-  border: none;
+  border: solid 3px #ef4565;
   border-radius: 16px;
   font-size: 20px;
   font-weight: bold;
   color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
   text-align: center;
+}
+.game__finish-display__input__button:hover {
+  background-color: #fff;
+  color: #ef4565;
+  border: solid 3px #ef4565;
 }
 @media screen and (max-width: 375px) {
   .game__finish-display__input__button {
