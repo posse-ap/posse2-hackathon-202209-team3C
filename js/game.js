@@ -6,8 +6,9 @@
   const themeDisplayInputs = document.querySelectorAll(
     ".game__theme-display__input"
   );
-
   const blackboard = document.getElementById("blackboard-theme");
+
+  // 話題を格納
   const defaultThemes = [
     "趣味",
     "Harbors",
@@ -15,8 +16,14 @@
     "大好きなPOSSEの先輩",
     "恋愛",
   ];
-  const themeInputValues = [];
+  let themeInputValues = [];
+  if (JSON.parse(localStorage.getItem("inputThemes"))) {
+    themeInputValues = JSON.parse(localStorage.getItem("inputThemes"));
+    console.log(themeInputValues);
+  }
   let allThemes = [];
+
+  // 指示を格納
   const instructions = [
     "についてディベートして！",
     "についての思いを熱くプレゼンして！",
@@ -53,7 +60,6 @@
   // 終了画面の黒板にお題のHTMLをセットする関数
   function setTheme() {
     allThemes = themeInputValues.concat(defaultThemes);
-
     allThemes.forEach((element) => {
       const themeInBlackboardElement = document.createElement("p");
       themeInBlackboardElement.classList.add("game__blackboard__theme");
@@ -79,13 +85,6 @@
 
   createFamousQuotes(sliderOne);
   createFamousQuotes(sliderTwo);
-
-  // トップに戻るを押した際に、お題のインプットを空にする
-  finishDisplayButton.addEventListener("click", () => {
-    themeDisplayInputs.forEach((element) => {
-      element.innerHTML("");
-    });
-  });
 
   // スロット
   // スロットパネルのクラス
@@ -162,4 +161,23 @@
   });
 
   const panels = [new Panel(), new Panel()];
+
+  // リセットボタンを押したら、"inputThemes"キーの値を削除する
+  const themeResetButton = document.getElementById("theme-reset-button");
+  themeResetButton.addEventListener("click", () => {
+    localStorage.removeItem("inputThemes");
+    location.reload();
+  });
+
+  // 保存ボタンを押したら、themeInputValuesがストレージに保存される
+  const keepThemesButton = document.getElementById("keep-themes-button");
+  keepThemesButton.addEventListener("click", () => {
+    let keepThemesJson = JSON.stringify(themeInputValues);
+    localStorage.setItem("inputThemes", keepThemesJson);
+  });
+
+  // 終了画面のトップに戻るを押したらリロードされる
+  finishDisplayButton.addEventListener("click", () => {
+    location.reload();
+  });
 }

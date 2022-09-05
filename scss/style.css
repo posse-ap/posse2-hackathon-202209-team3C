@@ -393,6 +393,10 @@ button {
     display: block;
   }
 }
+.game__start-display__text {
+  font-size: 24px;
+  font-weight: bold;
+}
 .game__start-display__input {
   margin: 16px auto 40px;
   font-size: 20px;
@@ -400,6 +404,18 @@ button {
 }
 .game__start-display__button {
   width: 90%;
+}
+.game__start-display__button--reset {
+  margin: 0px auto 20px;
+  padding: 10px 20px;
+  background-color: #ef4565;
+  border: none;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+  text-align: center;
 }
 
 .game__theme-display {

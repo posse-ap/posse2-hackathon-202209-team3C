@@ -129,6 +129,15 @@
               </div>
               <div class="game__start-display__container">
                 <h1 class="game__title game__start-display__title">コミもく</h1>
+                <p class="game__start-display__text">
+                  今までのお題をリセットしますか？
+                </p>
+                <button
+                  class="game__start-display__button--reset"
+                  id="theme-reset-button"
+                >
+                  リセット
+                </button>
                 <button
                   class="game__button game__start-display__button"
                   id="start-display-button"
@@ -232,9 +241,12 @@
                   </button>
                 </div>
                 <p class="game__finish-display__text">
-                  今回のお題をリセットせずに続けますか？
-                  <button class="game__finish-display__input__button">
-                    リセットする
+                  今回のお題を保存しますか？
+                  <button
+                    class="game__finish-display__input__button"
+                    id="keep-themes-button"
+                  >
+                    保存する
                   </button>
                 </p>
                 <button
