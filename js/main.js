@@ -4,11 +4,13 @@
   const startDisplay = document.getElementById("start-display");
   const themeDisplay = document.getElementById("theme-display");
   const playDisplay = document.getElementById("play-display");
+  const finishDisplay = document.getElementById("finish-display");
 
   const startDisplayButton = document.getElementById("start-display-button");
   const themeDisplayButton = document.getElementById("theme-display-button");
   const returnButton = document.getElementById("return");
   const finishButton = document.getElementById("finish");
+  const finishDisplayButton = document.getElementById("finish-display-button");
 
   // js-noneをつける関数
   function addDisplayNone(button, target) {
@@ -21,6 +23,7 @@
   addDisplayNone(themeDisplayButton, themeDisplay);
   addDisplayNone(returnButton, themeDisplay);
   addDisplayNone(finishButton, playDisplay);
+  addDisplayNone(finishDisplayButton, finishDisplay);
 
   // js-noneを外す関数
   function removeDisplayNone(button, target) {
@@ -32,5 +35,6 @@
   removeDisplayNone(startDisplayButton, themeDisplay);
   removeDisplayNone(themeDisplayButton, playDisplay);
   removeDisplayNone(returnButton, startDisplay);
-  removeDisplayNone(finishButton, startDisplay);
+  removeDisplayNone(finishButton, finishDisplay);
+  removeDisplayNone(finishDisplayButton, startDisplay);
 }

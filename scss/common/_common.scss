@@ -8,6 +8,10 @@ body {
   color: v.$font-color;
   z-index: -3;
   overflow: hidden;
+
+  @include m.mq(sp) {
+    overflow: visible;
+  }
 }
 
 button {
@@ -32,6 +36,10 @@ button {
     background-color: v.$blue;
     opacity: 0.8;
     z-index: -1;
+  }
+
+  @include m.mq(sp) {
+    height: auto;
   }
 }
 
