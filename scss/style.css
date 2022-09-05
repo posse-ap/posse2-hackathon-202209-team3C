@@ -305,6 +305,8 @@ button {
 @media screen and (max-width: 375px) {
   .game {
     width: 100%;
+    border: solid 4px #fff;
+    border-radius: 30px;
   }
 }
 .game__inner {
@@ -420,6 +422,11 @@ button {
   font-size: 20px;
   cursor: pointer;
 }
+@media screen and (max-width: 375px) {
+  .game__theme-display--return {
+    padding-top: 5px;
+  }
+}
 .game__theme-display__title {
   padding-bottom: 40px;
 }
@@ -437,7 +444,7 @@ button {
 }
 @media screen and (max-width: 375px) {
   .game__theme-display__input__container {
-    gap: 20px;
+    gap: 15px;
   }
 }
 .game__theme-display__input {
@@ -456,15 +463,35 @@ button {
 .game__play-display {
   height: 100%;
 }
+@media screen and (max-width: 375px) {
+  .game__play-display {
+    margin: 10% 3% 5%;
+  }
+}
 .game__play-display__head {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 375px) {
+  .game__play-display__head {
+    padding: 0 5%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .game__play-display__title {
+    font-size: 28px;
+  }
 }
 .game__play-display--finish {
   padding-top: 10px;
   font-weight: bold;
   font-size: 20px;
   cursor: pointer;
+}
+@media screen and (max-width: 375px) {
+  .game__play-display--finish {
+    padding-top: 5px;
+  }
 }
 .game__play-display__slot {
   margin: 40px auto 0px;
@@ -473,6 +500,12 @@ button {
   border: solid 4px #fff;
   border-radius: 16px;
   background-color: #3da9fc;
+}
+@media screen and (max-width: 375px) {
+  .game__play-display__slot {
+    margin: 20px 0 0;
+    padding: 20px 0;
+  }
 }
 .game__play-display__slot__spin {
   margin-bottom: 20px;
@@ -486,13 +519,19 @@ button {
 }
 .game__play-display__slot__inner {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   margin: 0 auto;
   max-width: 760px;
   justify-content: center;
   font-size: 24px;
   font-weight: bold;
   font-family: "Yuji Syuku", serif;
+}
+@media screen and (max-width: 375px) {
+  .game__play-display__slot__inner {
+    flex-direction: column;
+    padding: 0 20px;
+  }
 }
 .game__play-display__slot__panel {
   display: flex;
@@ -502,6 +541,11 @@ button {
   justify-content: center;
   align-items: center;
   border-radius: 16px;
+}
+@media screen and (max-width: 375px) {
+  .game__play-display__slot__panel {
+    width: 100%;
+  }
 }
 .game__play-display__slot__text-box {
   display: flex;
@@ -528,6 +572,13 @@ button {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
   text-align: center;
 }
+@media screen and (max-width: 375px) {
+  .game__play-display__slot__button {
+    margin-top: 10px;
+    width: 50%;
+    height: 60px;
+  }
+}
 
 .game__finish-display {
   gap: 20px;
@@ -535,6 +586,11 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 375px) {
+  .game__finish-display {
+    flex-direction: column;
+  }
 }
 .game__finish-display__container {
   display: flex;
@@ -549,6 +605,9 @@ button {
 }
 .game__finish-display__text {
   font-size: 24px;
+}
+.game__finish-display__reset {
+  width: 150%;
 }
 .game__finish-display__input {
   margin-top: 20px;
@@ -569,6 +628,19 @@ button {
   color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
   text-align: center;
+}
+@media screen and (max-width: 375px) {
+  .game__finish-display__input__button {
+    width: 80%;
+  }
+}
+.game__finish-display__button {
+  width: 50%;
+}
+@media screen and (max-width: 375px) {
+  .game__finish-display__button {
+    width: 120%;
+  }
 }
 
 .game__blackboard {

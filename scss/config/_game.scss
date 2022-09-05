@@ -21,6 +21,8 @@
 
   @include m.mq(sp) {
     width: 100%;
+    border: solid 4px v.$white;
+    border-radius: 30px;
   }
 
   &__inner {
@@ -143,6 +145,10 @@
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
+
+    @include m.mq(sp) {
+      padding-top: 5px;
+    }
   }
 
   &__title {
@@ -161,7 +167,7 @@
     flex-wrap: wrap;
 
     @include m.mq(sp) {
-      gap: 20px;
+      gap: 15px;
     }
   }
 
@@ -183,9 +189,23 @@
 .game__play-display {
   height: 100%;
 
+  @include m.mq(sp) {
+    margin: 10% 3% 5%;
+  }
+
   &__head {
     display: flex;
     justify-content: space-between;
+
+    @include m.mq(sp) {
+      padding: 0 5%;
+    }
+  }
+
+  &__title {
+    @include m.mq(sp) {
+      font-size: 28px;
+    }
   }
 
   &--finish {
@@ -193,6 +213,10 @@
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
+
+    @include m.mq(sp) {
+      padding-top: 5px;
+    }
   }
 
   &__slot {
@@ -202,6 +226,11 @@
     border: solid 4px v.$white;
     border-radius: 16px;
     background-color: v.$button-color;
+
+    @include m.mq(sp) {
+      margin: 20px 0 0;
+      padding: 20px 0;
+    }
 
     &__spin {
       margin-bottom: 20px;
@@ -216,13 +245,18 @@
 
     &__inner {
       display: flex;
-      gap: 20px;
+      gap: 30px;
       margin: 0 auto;
       max-width: 760px;
       justify-content: center;
       font-size: 24px;
       font-weight: bold;
       font-family: "Yuji Syuku", serif;
+
+      @include m.mq(sp) {
+        flex-direction: column;
+        padding: 0 20px;
+      }
     }
 
     &__panel {
@@ -233,6 +267,10 @@
       justify-content: center;
       align-items: center;
       border-radius: 16px;
+
+      @include m.mq(sp) {
+        width: 100%;
+      }
     }
 
     &__text-box {
@@ -260,6 +298,12 @@
       color: v.$white;
       box-shadow: 0px 4px 4px rgba($color: v.$black, $alpha: 0.6);
       text-align: center;
+
+      @include m.mq(sp) {
+        margin-top: 10px;
+        width: 50%;
+        height: 60px;
+      }
     }
   }
 }
@@ -271,6 +315,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include m.mq(sp) {
+    flex-direction: column;
+  }
 
   &__container {
     display: flex;
@@ -286,6 +334,12 @@
 
   &__text {
     font-size: 24px;
+    // width: 100%;
+    // width: 80vw;
+  }
+
+  &__reset {
+    width: 150%;
   }
 
   &__input {
@@ -307,6 +361,18 @@
       color: v.$white;
       box-shadow: 0px 4px 4px rgba($color: v.$black, $alpha: 0.6);
       text-align: center;
+
+      @include m.mq(sp) {
+        width: 80%;
+      }
+    }
+  }
+
+  &__button {
+    width: 50%;
+
+    @include m.mq(sp) {
+      width: 120%;
     }
   }
 }
