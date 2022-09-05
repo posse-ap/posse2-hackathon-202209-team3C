@@ -2,11 +2,13 @@
 
 {
   const themeDisplayButton = document.getElementById("theme-display-button");
+  const finishDisplayButton = document.getElementById("finish-display-button");
   const themeDisplayInputs = document.querySelectorAll(
     ".game__theme-display__input"
   );
-
   const blackboard = document.getElementById("blackboard-theme");
+
+  // 話題を格納
   const defaultThemes = [
     "趣味",
     "Harbors",
@@ -14,8 +16,27 @@
     "大好きなPOSSEの先輩",
     "恋愛",
   ];
-  const themeInputValues = [];
-  const instructions = ["aaa", "bbb", "ccc"];
+  let themeInputValues = [];
+  if (JSON.parse(localStorage.getItem("inputThemes"))) {
+    themeInputValues = JSON.parse(localStorage.getItem("inputThemes"));
+    console.log(themeInputValues);
+  }
+  let allThemes = [];
+
+  // 指示を格納
+  const instructions = [
+    "についてディベートして！",
+    "についての思いを熱くプレゼンして！",
+    "に関するポーズをして！",
+    "についてハイテンションで語って！",
+    "をカタカナ言葉を使わずに話して！",
+    "について語尾にござるをつけて話して！",
+    "の可愛さを語って！",
+    "のかっこよさを語って！",
+    "を顔で表現して",
+    "を語尾をでちゅにして語って！",
+    "をかわいこぶって話して！",
+  ];
 
   const sliderOne = document.getElementById("slider-one");
   const sliderTwo = document.getElementById("slider-two");
@@ -38,8 +59,7 @@
 
   // 終了画面の黒板にお題のHTMLをセットする関数
   function setTheme() {
-    const allThemes = themeInputValues.concat(defaultThemes);
-
+    allThemes = themeInputValues.concat(defaultThemes);
     allThemes.forEach((element) => {
       const themeInBlackboardElement = document.createElement("p");
       themeInBlackboardElement.classList.add("game__blackboard__theme");
@@ -123,11 +143,10 @@
     }
   }
 
-  const panels = [new Panel(), new Panel()];
-
   // スロットに配列を渡す
-  const themes = themeInputValues;
+  // const themes = themeInputValues.concat(defaultThemes);
   const spin = document.getElementById("spin");
+
   spin.addEventListener("click", () => {
     if (spin.classList.contains("js-clicked")) {
       return;
@@ -137,7 +156,28 @@
     panels.forEach((panel) => {
       panel.removeJsClicked();
     });
-    panels[0].spin(themes);
+    panels[0].spin(allThemes);
     panels[1].spin(instructions);
+  });
+
+  const panels = [new Panel(), new Panel()];
+
+  // リセットボタンを押したら、"inputThemes"キーの値を削除する
+  const themeResetButton = document.getElementById("theme-reset-button");
+  themeResetButton.addEventListener("click", () => {
+    localStorage.removeItem("inputThemes");
+    location.reload();
+  });
+
+  // 保存ボタンを押したら、themeInputValuesがストレージに保存される
+  const keepThemesButton = document.getElementById("keep-themes-button");
+  keepThemesButton.addEventListener("click", () => {
+    let keepThemesJson = JSON.stringify(themeInputValues);
+    localStorage.setItem("inputThemes", keepThemesJson);
+  });
+
+  // 終了画面のトップに戻るを押したらリロードされる
+  finishDisplayButton.addEventListener("click", () => {
+    location.reload();
   });
 }

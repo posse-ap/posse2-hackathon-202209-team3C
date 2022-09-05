@@ -12,29 +12,48 @@
   const finishButton = document.getElementById("finish");
   const finishDisplayButton = document.getElementById("finish-display-button");
 
-  // js-noneをつける関数
-  function addDisplayNone(button, target) {
+  // js-blockをつける関数
+  function addDisplayblock(button, target) {
     button.addEventListener("click", () => {
-      target.classList.add("js-none");
+      target.classList.add("js-block");
     });
   }
 
-  addDisplayNone(startDisplayButton, startDisplay);
-  addDisplayNone(themeDisplayButton, themeDisplay);
-  addDisplayNone(returnButton, themeDisplay);
-  addDisplayNone(finishButton, playDisplay);
-  addDisplayNone(finishDisplayButton, finishDisplay);
+  addDisplayblock(startDisplayButton, themeDisplay);
+  addDisplayblock(themeDisplayButton, playDisplay);
 
-  // js-noneを外す関数
+
+  // js-flexをつける関数
+  function addDisplayflex(button, target) {
+    button.addEventListener("click", () => {
+      target.classList.add("js-flex");
+    });
+  }
+
+  addDisplayflex(returnButton, startDisplay);
+  addDisplayflex(finishButton, finishDisplay);
+  addDisplayflex(finishDisplayButton, startDisplay);
+
+
+  // js-blockを外す関数
   function removeDisplayNone(button, target) {
     button.addEventListener("click", () => {
-      target.classList.remove("js-none");
+      target.classList.remove("js-block");
     });
   }
 
-  removeDisplayNone(startDisplayButton, themeDisplay);
-  removeDisplayNone(themeDisplayButton, playDisplay);
-  removeDisplayNone(returnButton, startDisplay);
-  removeDisplayNone(finishButton, finishDisplay);
-  removeDisplayNone(finishDisplayButton, startDisplay);
+  removeDisplayNone(themeDisplayButton, themeDisplay);
+  removeDisplayNone(returnButton, themeDisplay);
+  removeDisplayNone(finishButton, playDisplay);
+  
+
+  // js-flexを外す関数
+  function removeDisplayflex(button, target) {
+    button.addEventListener("click", () => {
+      target.classList.remove("js-flex");
+    });
+  }
+
+  removeDisplayflex(startDisplayButton, startDisplay);
+  removeDisplayflex(finishDisplayButton, finishDisplay);
 }

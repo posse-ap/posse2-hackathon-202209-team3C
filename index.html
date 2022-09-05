@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>POSSE 初めてのWeb制作</title>
+    <title>コミもく</title>
 
     <link rel="stylesheet" href="./scss/style.css" />
     <!-- google fonts -->
@@ -66,7 +66,7 @@
         <section class="game">
           <div class="game__inner">
             <!-- start game__start-display -->
-            <div class="game__start-display" id="start-display">
+            <div class="game__start-display js-flex" id="start-display">
               <div class="game__start-display__title__sp">コミもく</div>
               <div class="game__blackboard">
                 <span class="game__blackboard__chalk__1"></span>
@@ -129,6 +129,15 @@
               </div>
               <div class="game__start-display__container">
                 <h1 class="game__title game__start-display__title">コミもく</h1>
+                <p class="game__start-display__text">
+                  今までのお題をリセットしますか？
+                </p>
+                <button
+                  class="game__start-display__button--reset"
+                  id="theme-reset-button"
+                >
+                  リセット
+                </button>
                 <button
                   class="game__button game__start-display__button"
                   id="start-display-button"
@@ -140,7 +149,7 @@
             <!-- end start game__start-display -->
 
             <!-- start game__theme-display -->
-            <div class="game__theme-display js-none" id="theme-display">
+            <div class="game__theme-display" id="theme-display">
               <div class="game__theme-display__head">
                 <h1 class="game__title game__theme-display__title">コミもく</h1>
                 <div class="game__theme-display--return" id="return">
@@ -231,14 +240,24 @@
                     確定する
                   </button>
                 </div>
+<<<<<<< HEAD
                 <p class="game__finish-display__text">
+                  今回のお題を保存しますか？
+                  <button
+                    class="game__finish-display__input__button"
+                    id="keep-themes-button"
+                  >
+                    保存する
+=======
+                <p class="game__finish-display__text game__finish-display__reset">
                   今回のお題をリセットせずに続けますか？
                   <button class="game__finish-display__input__button">
                     リセットする
+>>>>>>> origin/feature/6/yamato
                   </button>
                 </p>
                 <button
-                  class="game__button game__finish__button"
+                  class="game__button game__finish-display__button"
                   id="finish-display-button"
                 >
                   トップに戻る
