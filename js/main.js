@@ -10,6 +10,7 @@
   const themeDisplayButton = document.getElementById("theme-display-button");
   const returnButton = document.getElementById("return");
   const finishButton = document.getElementById("finish");
+  const spFinishButton = document.getElementById("finish-sp");
   const finishDisplayButton = document.getElementById("finish-display-button");
 
   // js-blockをつける関数
@@ -32,6 +33,7 @@
 
   addDisplayflex(returnButton, startDisplay);
   addDisplayflex(finishButton, finishDisplay);
+  addDisplayflex(spFinishButton, finishDisplay);
   addDisplayflex(finishDisplayButton, startDisplay);
 
 
@@ -45,6 +47,7 @@
   removeDisplayNone(themeDisplayButton, themeDisplay);
   removeDisplayNone(returnButton, themeDisplay);
   removeDisplayNone(finishButton, playDisplay);
+  removeDisplayNone(spFinishButton, playDisplay);
   
 
   // js-flexを外す関数

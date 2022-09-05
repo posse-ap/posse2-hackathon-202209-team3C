@@ -151,10 +151,10 @@
             <!-- start game__theme-display -->
             <div class="game__theme-display" id="theme-display">
               <div class="game__theme-display__head">
-                <h1 class="game__title game__theme-display__title">コミもく</h1>
                 <div class="game__theme-display--return" id="return">
-                  やり直す
+                  &lt;  やり直す
                 </div>
+                <h1 class="game__title game__theme-display__title">コミもく</h1>
               </div>
               <p class="game__text">お題を入力してね！(16文字以内)</p>
               <div class="game__theme-display__input__container">
@@ -199,7 +199,7 @@
               <div class="game__play-display__head">
                 <h1 class="game__title game__play-display__title">コミもく</h1>
                 <div class="game__play-display--finish" id="finish">
-                  終了する
+                  終了する  &raquo;
                 </div>
               </div>
               <div class="game__play-display__slot">
@@ -207,6 +207,9 @@
                   SPIN
                 </button>
                 <div class="game__play-display__slot__inner" id="slot"></div>
+              </div>
+              <div class="game__play-display--finish game__play-display--finish__sp" id="finish-sp">
+                終了する  &raquo;
               </div>
             </div>
             <!-- end game__play-display -->
@@ -240,7 +243,7 @@
                     確定する
                   </button>
                 </div>
-                <p class="game__finish-display__text">
+                <p class="game__finish-display__text game__finish-display__text__keep">
                   今回のお題を保存しますか？
                   <button
                     class="game__finish-display__input__button"
