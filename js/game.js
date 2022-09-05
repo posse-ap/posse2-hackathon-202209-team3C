@@ -1,11 +1,17 @@
 "use strict";
 
 {
+  // 話題のinputタグを複製する
+  const themeContainer = document.getElementById("theme-input-container");
+  const themeInput = document.querySelector(".game__theme-display__input");
+  for (let i = 0; i < 19; i++) {
+    const themesInput = themeInput.cloneNode(false);
+    themeContainer.appendChild(themesInput);
+  }
+
+  // 各ボタンを格納
   const themeDisplayButton = document.getElementById("theme-display-button");
   const finishDisplayButton = document.getElementById("finish-display-button");
-  const themeDisplayInputs = document.querySelectorAll(
-    ".game__theme-display__input"
-  );
   const blackboard = document.getElementById("blackboard-theme");
 
   // 話題を格納
@@ -15,52 +21,27 @@
     "青春",
     "大好きなPOSSEの先輩",
     "恋愛",
+    "あなたの高校生活",
+    "POSSE",
+    "スポーツ",
+    "食欲",
   ];
   let themeInputValues = [];
   if (JSON.parse(localStorage.getItem("inputThemes"))) {
     themeInputValues = JSON.parse(localStorage.getItem("inputThemes"));
-    console.log(themeInputValues);
   }
   let allThemes = [];
 
-  // 指示を格納
-  const instructions = [
-    "についてディベートして！",
-    "についての思いを熱くプレゼンして！",
-    "に関するポーズをして！",
-    "についてハイテンションで語って！",
-    "をカタカナ言葉を使わずに話して！",
-    "について語尾にござるをつけて話して！",
-    "の可愛さを語って！",
-    "のかっこよさを語って！",
-    "を顔で表現して",
-    "を語尾をでちゅにして語って！",
-    "をかわいこぶって話して！",
-  ];
-
-  // 名言を格納
-  const sliderOne = document.getElementById("slider-one");
-  const sliderTwo = document.getElementById("slider-two");
-  let famousQuoteValues = [];
-  if (JSON.parse(localStorage.getItem("FamousQuotes"))) {
-    famousQuoteValues = JSON.parse(localStorage.getItem("FamousQuotes"));
-    console.log(famousQuoteValues);
-  }
-
-  // 名言を獲得し、ヘッダーにセットする
-  function createFamousQuotes(place) {
-    famousQuoteValues.forEach((element) => {
-      const famousQuoteElement = document.createElement("p");
-      famousQuoteElement.classList.add("header__inner__slider__text");
-      famousQuoteElement.textContent = element;
-      place.appendChild(famousQuoteElement);
-    });
-  }
-  createFamousQuotes(sliderOne);
-  createFamousQuotes(sliderTwo);
+  // お題の配列を獲得し、終了画面の黒板にHTMLをセットする
+  themeDisplayButton.addEventListener("click", () => {
+    getValue();
+  });
 
   // inputの値を配列にする関数
   function getValue() {
+    const themeDisplayInputs = document.querySelectorAll(
+      ".game__theme-display__input"
+    );
     themeDisplayInputs.forEach((input) => {
       if (input.value) {
         themeInputValues.push(input.value);
@@ -80,10 +61,48 @@
     });
   }
 
-  // お題の配列を獲得し、終了画面の黒板にHTMLをセットする
-  themeDisplayButton.addEventListener("click", () => {
-    getValue();
-  });
+  // 指示を格納
+  const instructions = [
+    "についてディベートして！",
+    "についての思いを熱くプレゼンして！",
+    "に関するポーズをして！",
+    "についてハイテンションで語って！",
+    "をカタカナ言葉を使わずに話して！",
+    "について語尾にござるをつけて話して！",
+    "の可愛さを語って！",
+    "のかっこよさを語って！",
+    "を顔で表現して",
+    "を語尾をでちゅにして語って！",
+    "を語尾をだえ〜にして語って！",
+    "をかわいこぶって話して！",
+    "をギャル風に話して！",
+    "について裏声だけで話して！",
+    "をジェスチャーだけで話して！",
+    "についてイケボ風で話して！",
+    "についてカワボで話して！",
+    "についてずっと笑顔で話して！",
+    "についてのポーズをしてスクショ！",
+  ];
+
+  // 名言を格納
+  const sliderOne = document.getElementById("slider-one");
+  const sliderTwo = document.getElementById("slider-two");
+  let famousQuoteValues = [];
+  if (JSON.parse(localStorage.getItem("FamousQuotes"))) {
+    famousQuoteValues = JSON.parse(localStorage.getItem("FamousQuotes"));
+  }
+
+  // 名言を獲得し、ヘッダーにセットする
+  function createFamousQuotes(place) {
+    famousQuoteValues.forEach((element) => {
+      const famousQuoteElement = document.createElement("p");
+      famousQuoteElement.classList.add("header__inner__slider__text");
+      famousQuoteElement.textContent = element;
+      place.appendChild(famousQuoteElement);
+    });
+  }
+  createFamousQuotes(sliderOne);
+  createFamousQuotes(sliderTwo);
 
   // スロット
   // スロットパネルのクラス
@@ -198,12 +217,4 @@
   finishDisplayButton.addEventListener("click", () => {
     location.reload();
   });
-
-  const themeContainer = document.querySelector('.game__theme-display__input__container');
-  const themeInput = document.getElementById('game__theme-display__input');
-  const themesInput = themeInput.cloneNode(false);
-  for (let i = 0; i < 19; i++) {
-    const themesInput = themeInput.cloneNode(false);
-    themeContainer.appendChild(themesInput);
-  }
 }

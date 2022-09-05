@@ -69,7 +69,6 @@
   addDisplayFlex(returnButton, startDisplay);
   addDisplayFlex(finishButton, finishDisplay);
   addDisplayFlex(spFinishButton, finishDisplay);
-  addDisplayFlex(finishDisplayButton, startDisplay);
 
   // js-blockを外す関数
   function removeDisplayBlock(button, target) {
@@ -91,5 +90,4 @@
   }
 
   removeDisplayFlex(startDisplayButton, startDisplay);
-  removeDisplayFlex(finishDisplayButton, finishDisplay);
 }

@@ -141,7 +141,6 @@
       margin: 10px auto 20px;
       padding: 10px 20px;
       background-color: v.$red;
-      // border: none;
       border: solid 3px v.$red;
       border-radius: 16px;
       font-size: 20px;
@@ -163,6 +162,10 @@
 .game__theme-display {
   display: none;
   height: 100%;
+
+  @include m.mq(sp) {
+    padding: 20px;
+  }
 
   &__head {
     display: flex;
@@ -484,6 +487,7 @@
 
     @include m.mq(sp) {
       width: 120%;
+      font-size: 24px;
     }
   }
 }

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -180,7 +179,7 @@ body {
   z-index: -3;
   overflow: hidden;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   body {
     overflow: visible;
   }
@@ -209,7 +208,7 @@ button {
   opacity: 0.8;
   z-index: -1;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .container {
     height: auto;
     overflow: hidden;
@@ -246,7 +245,7 @@ button {
   font-weight: bold;
   color: #fff;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .loader__font {
     font-size: 36px;
   }
@@ -268,7 +267,7 @@ button {
   text-align: center;
   border: solid 4px #90b4ce;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .header__title {
     width: 96px;
     font-size: 16px;
@@ -308,7 +307,7 @@ button {
   padding: 10px;
   font-weight: bold;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .header__inner__slider__text {
     font-size: 10px;
     -ms-writing-mode: tb-rl;
@@ -332,7 +331,7 @@ button {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .main {
     display: flex;
     align-items: center;
@@ -351,7 +350,7 @@ button {
   overflow: hidden;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game {
     width: 100%;
     border: solid 4px #fff;
@@ -361,7 +360,7 @@ button {
 .game__inner {
   padding: 40px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__inner {
     padding: 0;
     width: 100%;
@@ -404,7 +403,7 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__start-display {
     flex-direction: column;
     width: 100%;
@@ -422,7 +421,7 @@ button {
   align-items: center;
   text-align: center;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__start-display__container {
     width: 100%;
     height: 100%;
@@ -432,7 +431,7 @@ button {
 .game__start-display__title {
   padding: 80px 0;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__start-display__title {
     display: none;
     padding: 10% 0;
@@ -444,7 +443,7 @@ button {
   font-size: 40px;
   font-weight: bold;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__start-display__title__sp {
     display: block;
   }
@@ -483,13 +482,18 @@ button {
   display: none;
   height: 100%;
 }
+@media screen and (max-width: 414px) {
+  .game__theme-display {
+    padding: 20px;
+  }
+}
 .game__theme-display__head {
   display: flex;
   padding-bottom: 40px;
   justify-content: space-between;
   align-items: center;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__theme-display__head {
     padding: 20px 20px;
   }
@@ -510,7 +514,7 @@ button {
   background-color: #094067;
   border: solid 2px #094067;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__theme-display--return {
     position: static;
     height: 20px;
@@ -519,7 +523,7 @@ button {
 .game__theme-display__title {
   margin: 0 auto;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__theme-display__title {
     font-size: 24px;
     margin: 0;
@@ -538,7 +542,7 @@ button {
   margin: 3% 0;
   overflow-y: scroll;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__theme-display__input__container {
     gap: 15px;
   }
@@ -546,7 +550,7 @@ button {
 .game__theme-display__input {
   font-size: 32px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__theme-display__input {
     width: 80%;
   }
@@ -556,7 +560,7 @@ button {
   display: none;
   height: 100%;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__play-display {
     margin: 10% 3% 5%;
   }
@@ -565,7 +569,7 @@ button {
   display: flex;
   justify-content: space-between;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__play-display__head {
     padding: 0 5%;
   }
@@ -573,7 +577,7 @@ button {
 .game__play-display__title {
   margin: 0 auto;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__play-display__title {
     margin-top: 8px;
     font-size: 28px;
@@ -589,7 +593,7 @@ button {
   border-radius: 10px;
   cursor: pointer;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__play-display--finish {
     position: static;
   }
@@ -616,7 +620,7 @@ button {
   background-color: #094067;
   border: solid 2px #094067;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__play-display--finish__sp {
     display: block;
   }
@@ -629,7 +633,7 @@ button {
   border-radius: 16px;
   background-color: #3da9fc;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__play-display__slot {
     margin: 20px 0 0;
     padding: 20px 0;
@@ -659,7 +663,7 @@ button {
   font-weight: bold;
   font-family: "Yuji Syuku", serif;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__play-display__slot__inner {
     flex-direction: column;
     padding: 0 20px;
@@ -674,7 +678,7 @@ button {
   align-items: center;
   border-radius: 16px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__play-display__slot__panel {
     width: 100%;
   }
@@ -709,7 +713,7 @@ button {
   color: #ef4565;
   border: solid 3px #ef4565;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__play-display__slot__button {
     margin-top: 10px;
     width: 50%;
@@ -725,7 +729,7 @@ button {
   align-items: center;
   padding-bottom: 20px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__finish-display {
     flex-direction: column;
   }
@@ -757,7 +761,7 @@ button {
   border: solid 4px #90b4ce;
   border-radius: 16px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__finish-display__input {
     font-size: 20px;
   }
@@ -780,7 +784,7 @@ button {
   color: #ef4565;
   border: solid 3px #ef4565;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__finish-display__input__button {
     width: 80%;
   }
@@ -788,9 +792,10 @@ button {
 .game__finish-display__button {
   width: 50%;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__finish-display__button {
     width: 120%;
+    font-size: 24px;
   }
 }
 
@@ -798,10 +803,10 @@ button {
   position: relative;
   width: 50%;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__blackboard {
     width: 90%;
-    margin: 10% 0;
+    margin: 20px 0;
   }
 }
 .game__blackboard__container {
@@ -864,7 +869,7 @@ button {
   border: solid 5px #ffa500;
   border-radius: 1px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .game__blackboard__eraser__1::after {
     width: 13.5%;
     right: 30%;
@@ -902,6 +907,7 @@ button {
   color: #fff;
   background-color: #006400;
   font-size: 36px;
+  z-index: 1;
 }
 .game__blackboard__rule {
   margin: 10% 0;
@@ -913,8 +919,31 @@ button {
   margin: 0 auto;
   background: linear-gradient(transparent 78%, #1e90ff 0%);
 }
+.game__blackboard__rule__text {
+  position: relative;
+  padding: 8px;
+  z-index: 0;
+}
+@media screen and (max-width: 414px) {
+  .game__blackboard__rule__text {
+    font-size: 14px;
+  }
+}
 .game__blackboard__rule__text::before {
-  content: "・";
+  position: absolute;
+  display: block;
+  content: "";
+  top: 21px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+@media screen and (max-width: 414px) {
+  .game__blackboard__rule__text::before {
+    top: 16px;
+  }
 }
 .game__blackboard__rule__red {
   color: #f00;

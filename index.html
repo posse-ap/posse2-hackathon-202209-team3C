@@ -34,7 +34,6 @@
 
     <div class="container">
       <!-- start header -->
-
       <header class="header">
         <h2 class="header__title">過去の名言</h2>
         <div class="header__inner">
@@ -42,13 +41,13 @@
             class="header__inner__slider header__inner__slider--one"
             id="slider-one"
           ></div>
-
           <div
             class="header__inner__slider header__inner__slider--two"
             id="slider-two"
           ></div>
         </div>
       </header>
+      <!-- end header -->
 
       <!-- start main -->
       <main class="main">
@@ -86,9 +85,12 @@
                   <div class="game__blackboard__rule">
                     <p class="game__blackboard__rule__title">内容について</p>
                     <p class="game__blackboard__rule__text">
-                      みんなに後で<span class="game__blackboard__rule__yellow"
-                        >お題について考えて</span
-                      >もらうよ。
+                      スロットマシンがランダムにお題と指示を組み合わせて話題を作ってくれるよ！
+                    </p>
+                    <p class="game__blackboard__rule__text">
+                      みんなには<span class="game__blackboard__rule__yellow"
+                        >お題を考えて</span
+                      >作ってもらうよ。
                     </p>
                     <p class="game__blackboard__rule__text">
                       簡潔なお題<span class="game__blackboard__rule__red"
@@ -96,10 +98,27 @@
                       >を考えよう！
                     </p>
                     <p class="game__blackboard__rule__text">
-                      その後は決まったお題について、<span
-                        class="game__blackboard__rule__blue"
-                        >ディベート</span
-                      >したりしていくよ。
+                      ex)趣味、時事ネタ、人の名前など...
+                    </p>
+                    <p class="game__blackboard__rule__text">
+                      その後はスロットマシンで、お題とこちらが用意した指示を<span
+                        class="game__blackboard__rule__yellow"
+                        >ランダム</span
+                      >に組み合わせるよ！
+                    </p>
+                    <p class="game__blackboard__rule__text">
+                      <span class="game__blackboard__rule__blue"
+                        >話題と指示</span
+                      >に従ってワイワイ話しちゃおう!!
+                    </p>
+                    <p class="game__blackboard__rule__text">
+                      このゲームは話題を次のゲームに<span
+                        class="game__blackboard__rule__red"
+                        >持ち越したり</span
+                      >、ゲーム中にふと出た<span
+                        class="game__blackboard__rule__red"
+                        >名言を記録</span
+                      >できるよ！やればやるほど楽しい!!
                     </p>
                   </div>
                   <div class="game__blackboard__rule">
@@ -149,15 +168,18 @@
               <p class="game__text game__theme-display__text">
                 お題を入力してね！(16文字以内)
               </p>
-              <div class="game__theme-display__input__container">
+              <div
+                class="game__theme-display__input__container"
+                id="theme-input-container"
+              >
                 <input
                   type="text"
-                  class="game__input game__theme-display__input" id="game__theme-display__input"
+                  class="game__input game__theme-display__input"
                   maxlength="16"
                 />
               </div>
               <button class="game__button" id="theme-display-button">
-                スタート
+                セット！
               </button>
             </div>
             <!-- end game__theme-display -->
@@ -194,13 +216,13 @@
                 <span class="game__blackboard__eraser__2"></span>
                 <div class="game__blackboard__container">
                   <p class="game__blackboard__title">今回のお題</p>
-                  <div class="game__blackboard__rule" id="blackboard-theme">
-                    <!-- <p class="game__blackboard__rule__title">お題が入ります</p> -->
-                  </div>
+                  <div
+                    class="game__blackboard__rule"
+                    id="blackboard-theme"
+                  ></div>
                 </div>
               </div>
               <div class="game__finish-display__container">
-                <!-- <h1 class="game__title game__finish-display__title">コミもく</h1> -->
                 <div class="game__finish-display__input__container">
                   <p class="game__finish-display__text">
                     今回のゲーム中の名言は？
@@ -239,6 +261,7 @@
             <!-- end game__finish-display -->
           </div>
         </section>
+        <!-- end game -->
       </main>
     </div>
 

@@ -8,7 +8,7 @@
 
     @include m.mq(sp) {
       width: 90%;
-      margin: 10% 0;
+      margin: 20px 0;
     }
 
     &__container {
@@ -124,6 +124,7 @@
       color: v.$white;
       background-color: v.$blackboard-color;
       font-size: 36px;
+      z-index: 1;
     }
 
     &__rule {
@@ -138,8 +139,28 @@
       }
 
       &__text {
+        position: relative;
+        padding: 8px;
+        z-index: 0;
+
+        @include m.mq(sp) {
+          font-size: 14px;
+        }
+
         &::before {
-          content: "・";
+          position: absolute;
+          display: block;
+          content: "";
+          top: 21px;
+          left: 0;
+          width: 5px;
+          height: 5px;
+          background-color: v.$white;
+          border-radius: 50%;
+
+          @include m.mq(sp) {
+            top: 16px;
+          }
         }
       }
 
