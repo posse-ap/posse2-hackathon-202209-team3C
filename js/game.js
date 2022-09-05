@@ -87,7 +87,14 @@
   // 名言を格納
   const sliderOne = document.getElementById("slider-one");
   const sliderTwo = document.getElementById("slider-two");
-  let famousQuoteValues = [];
+  let famousQuoteValues = [
+    "旅行するならどこへ行きたい??",
+    "冗談じゃないわよゥ",
+    "何もなかった...!!",
+    "奇跡ナメるんじゃないよｵ!!!",
+    "人の夢は終わらねェ!!",
+    "おのかんさんしか勝たん",
+  ];
   if (JSON.parse(localStorage.getItem("FamousQuotes"))) {
     famousQuoteValues = JSON.parse(localStorage.getItem("FamousQuotes"));
   }
