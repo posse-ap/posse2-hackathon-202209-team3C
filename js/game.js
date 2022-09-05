@@ -5,7 +5,26 @@
   const themeDisplayInputs = document.querySelectorAll(
     ".game__theme-display__input"
   );
-  let themeInputValues = [];
+
+  const blackboard = document.getElementById("blackboard-theme");
+  const defaultThemes = [
+    "趣味",
+    "Harbors",
+    "青春",
+    "大好きなPOSSEの先輩",
+    "恋愛",
+  ];
+  const themeInputValues = [];
+  const instructions = ["aaa", "bbb", "ccc"];
+
+  const sliderOne = document.getElementById("slider-one");
+  const sliderTwo = document.getElementById("slider-two");
+  const defaultFamousQuotes = [
+    "寝不足は草",
+    " ステーキ美味しいよね！マッスルマッスル",
+    "まりじん",
+    "やまとラーメン好きってわけではないのか",
+  ];
 
   // inputの値を配列にする関数
   function getValue() {
@@ -14,11 +33,38 @@
         themeInputValues.push(input.value);
       }
     });
+    setTheme();
   }
 
+  // 終了画面の黒板にお題のHTMLをセットする関数
+  function setTheme() {
+    const allThemes = themeInputValues.concat(defaultThemes);
+
+    allThemes.forEach((element) => {
+      const themeInBlackboardElement = document.createElement("p");
+      themeInBlackboardElement.classList.add("game__blackboard__theme");
+      themeInBlackboardElement.textContent = element;
+      blackboard.appendChild(themeInBlackboardElement);
+    });
+  }
+
+  // お題の配列を獲得し、終了画面の黒板にHTMLをセットする
   themeDisplayButton.addEventListener("click", () => {
     getValue();
   });
+
+  // 名言を獲得し、ヘッダーにセットする
+  function createFamousQuotes(place) {
+    defaultFamousQuotes.forEach((element) => {
+      const famousQuoteElement = document.createElement("p");
+      famousQuoteElement.classList.add("header__inner__slider__text");
+      famousQuoteElement.textContent = element;
+      place.appendChild(famousQuoteElement);
+    });
+  }
+
+  createFamousQuotes(sliderOne);
+  createFamousQuotes(sliderTwo);
 
   // スロット
   // スロットパネルのクラス
@@ -81,7 +127,6 @@
 
   // スロットに配列を渡す
   const themes = themeInputValues;
-  const instructions = ["aaa", "bbb", "ccc"];
   const spin = document.getElementById("spin");
   spin.addEventListener("click", () => {
     if (spin.classList.contains("js-clicked")) {

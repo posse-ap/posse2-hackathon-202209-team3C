@@ -454,7 +454,7 @@ button {
   text-align: center;
 }
 .game__finish-display__text {
-  font-size: 20px;
+  font-size: 24px;
 }
 .game__finish-display__input {
   margin-top: 20px;
@@ -593,6 +593,12 @@ button {
 }
 .game__blackboard__rule__yellow {
   color: #ff0;
+}
+.game__blackboard__theme {
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .js-none {

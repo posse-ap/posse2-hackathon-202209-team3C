@@ -30,28 +30,32 @@
       <header class="header">
         <h2 class="header__title">過去の名言</h2>
         <div class="header__inner">
-          <div class="header__inner__slider header__inner__slider--one">
-            </p>
-            <p class="header__inner__slider__text">
+          <div
+            class="header__inner__slider header__inner__slider--one"
+            id="slider-one"
+          >
+            <!-- <p class="header__inner__slider__text">
               やまとラーメン好きってわけではないのか
             </p>
             <p class="header__inner__slider__text">寝不足で草</p>
             <p class="header__inner__slider__text">
               ステーキ美味しいよね！マッスルマッスル
             </p>
-            <p class="header__inner__slider__text">まりじん</p>
+            <p class="header__inner__slider__text">まりじん</p> -->
           </div>
 
-          <div class="header__inner__slider header__inner__slider--two">
-            </p>
-            <p class="header__inner__slider__text">
+          <div
+            class="header__inner__slider header__inner__slider--two"
+            id="slider-two"
+          >
+            <!-- <p class="header__inner__slider__text">
               やまとラーメン好きってわけではないのか
             </p>
             <p class="header__inner__slider__text">寝不足で草</p>
             <p class="header__inner__slider__text">
               ステーキ美味しいよね！マッスルマッスル
             </p>
-            <p class="header__inner__slider__text">まりじん</p>
+            <p class="header__inner__slider__text">まりじん</p> -->
           </div>
         </div>
       </header>
@@ -72,24 +76,56 @@
                   <p class="game__blackboard__title">ルール説明</p>
                   <div class="game__blackboard__rule">
                     <p class="game__blackboard__rule__title">コミもくとは？</p>
-                    <p class="game__blackboard__rule__text">コミもく(コミュニケーションもくもく)は<span class="game__blackboard__rule__red">コミュニケーションをとって</span>、みんなと仲良くなることが目的だよ。</p>
-                    <p class="game__blackboard__rule__text">今まで関わったことがない人とも<span class="game__blackboard__rule__blue">話す機会</span>にしたい！</p>
-                    <p class="game__blackboard__rule__text">積極的に楽しもう！</p>
+                    <p class="game__blackboard__rule__text">
+                      コミもく(コミュニケーションもくもく)は<span
+                        class="game__blackboard__rule__red"
+                        >コミュニケーションをとって</span
+                      >、みんなと仲良くなることが目的だよ。
+                    </p>
+                    <p class="game__blackboard__rule__text">
+                      今まで関わったことがない人とも<span
+                        class="game__blackboard__rule__blue"
+                        >話す機会</span
+                      >にしたい！
+                    </p>
+                    <p class="game__blackboard__rule__text">
+                      積極的に楽しもう！
+                    </p>
                   </div>
                   <div class="game__blackboard__rule">
                     <p class="game__blackboard__rule__title">内容について</p>
-                    <p class="game__blackboard__rule__text">みんなに後で<span class="game__blackboard__rule__yellow">お題について考えて</span>もらうよ。</p>
-                    <p class="game__blackboard__rule__text">簡潔なお題<span class="game__blackboard__rule__red">(16文字以内のお題)</span>を考えよう！</p>
-                    <p class="game__blackboard__rule__text">その後は決まったお題について、<span class="game__blackboard__rule__blue">ディベート</span>したりしていくよ。</p>
+                    <p class="game__blackboard__rule__text">
+                      みんなに後で<span class="game__blackboard__rule__yellow"
+                        >お題について考えて</span
+                      >もらうよ。
+                    </p>
+                    <p class="game__blackboard__rule__text">
+                      簡潔なお題<span class="game__blackboard__rule__red"
+                        >(16文字以内のお題)</span
+                      >を考えよう！
+                    </p>
+                    <p class="game__blackboard__rule__text">
+                      その後は決まったお題について、<span
+                        class="game__blackboard__rule__blue"
+                        >ディベート</span
+                      >したりしていくよ。
+                    </p>
                   </div>
                   <div class="game__blackboard__rule">
-                    <p class="game__blackboard__rule__title">今まで関わったことがない人とも<span class="game__blackboard__rule__yellow">仲良くなるチャンス</span>！</p>
-                    <p class="game__blackboard__rule">スタートボタンをクリックしよう！</p>
+                    <p class="game__blackboard__rule__title">
+                      今まで関わったことがない人とも<span
+                        class="game__blackboard__rule__yellow"
+                        >仲良くなるチャンス</span
+                      >！
+                    </p>
+                    <p class="game__blackboard__rule">
+                      スタートボタンをクリックしよう！
+                    </p>
                   </div>
                   <span class="game__blackboard__rule__yellow"></span>
                 </div>
               </div>
-                <div class="game__start-display__container">
+              <div class="game__start-display__container">
                 <h1 class="game__title game__start-display__title">コミもく</h1>
                 <button
                   class="game__button game__start__button"
@@ -113,7 +149,8 @@
               <div class="game__theme-display__input__container">
                 <input
                   type="text"
-                  class="game__input game__theme-display__input" maxlength="16"
+                  class="game__input game__theme-display__input"
+                  maxlength="16"
                 />
                 <input
                   type="text"
@@ -172,29 +209,41 @@
                 <span class="game__blackboard__eraser__2"></span>
                 <div class="game__blackboard__container">
                   <p class="game__blackboard__title">今回のお題</p>
-                  <div class="game__blackboard__rule">
-                    <p class="game__blackboard__rule__title">お題が入ります</p>
+                  <div class="game__blackboard__rule" id="blackboard-theme">
+                    <!-- <p class="game__blackboard__rule__title">お題が入ります</p> -->
                   </div>
                 </div>
               </div>
               <div class="game__finish-display__container">
                 <!-- <h1 class="game__title game__finish-display__title">コミもく</h1> -->
                 <div class="game__finish-display__input__container">
-                  <p class="game__finish-display__text">今回のゲーム中の名言は？</p>
-                  <input type="text" class="game__finish-display__input">
-                  <button class="game__finish-display__input__button">確定する</button>
+                  <p class="game__finish-display__text">
+                    今回のゲーム中の名言は？
+                  </p>
+                  <input
+                    type="text"
+                    class="game__finish-display__input"
+                    id="famous-quote-input"
+                  />
+                  <button class="game__finish-display__input__button">
+                    確定する
+                  </button>
                 </div>
                 <p class="game__finish-display__text">
                   今回のお題をリセットせずに続けますか？
-                  <input type="checkbox">
+                  <button class="game__finish-display__input__button">
+                    リセットする
+                  </button>
                 </p>
-                <button class="game__button game__finish__button" id="finish-display-button">
+                <button
+                  class="game__button game__finish__button"
+                  id="finish-display-button"
+                >
                   トップに戻る
                 </button>
               </div>
             </div>
             <!-- end game__finish-display -->
-
           </div>
         </section>
       </main>

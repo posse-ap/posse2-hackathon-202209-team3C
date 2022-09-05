@@ -143,5 +143,12 @@
         color: v.$chalk-yellow-color;
       }
     }
+
+    &__theme {
+      padding-bottom: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
   }
 }
