@@ -17,6 +17,12 @@
     text-align: center;
     border: solid 4px v.$blue;
 
+    @include m.mq(sp) {
+      width: 96px;
+      font-size: 16px;
+      writing-mode: vertical-rl;
+    }
+
     &::after {
       position: absolute;
       content: "";
@@ -49,6 +55,11 @@
         font-size: 24px;
         padding: 10px;
         font-weight: bold;
+
+        @include m.mq(sp) {
+          font-size: 10px;
+          writing-mode: vertical-rl;
+        }
       }
     }
   }

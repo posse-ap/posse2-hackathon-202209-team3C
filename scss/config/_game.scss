@@ -63,9 +63,9 @@
 
 // start-display
 .game__start-display {
+  display: none;
   gap: 20px;
   height: 100%;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 
@@ -127,6 +127,7 @@
 
 // theme-display
 .game__theme-display {
+  display: none;
   height: 100%;
 
   &__head {
@@ -159,12 +160,14 @@
 }
 
 // load-display
-.game__load-display {
-  height: 100%;
-}
+// .game__load-display {
+//   display: none;
+//   height: 100%;
+// }
 
 // play-display
 .game__play-display {
+  display: none;
   height: 100%;
 
   &__head {
@@ -250,9 +253,9 @@
 
 // finish-display
 .game__finish-display {
+  display: none;
   gap: 20px;
   height: 100%;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 
