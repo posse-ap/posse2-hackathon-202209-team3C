@@ -2,6 +2,7 @@
 
 {
   const themeDisplayButton = document.getElementById("theme-display-button");
+  const finishDisplayButton = document.getElementById("finish-display-button");
   const themeDisplayInputs = document.querySelectorAll(
     ".game__theme-display__input"
   );
@@ -15,7 +16,20 @@
     "恋愛",
   ];
   const themeInputValues = [];
-  const instructions = ["aaa", "bbb", "ccc"];
+  let allThemes = [];
+  const instructions = [
+    "についてディベートして！",
+    "についての思いを熱くプレゼンして！",
+    "に関するポーズをして！",
+    "についてハイテンションで語って！",
+    "をカタカナ言葉を使わずに話して！",
+    "について語尾にござるをつけて話して！",
+    "の可愛さを語って！",
+    "のかっこよさを語って！",
+    "を顔で表現して",
+    "を語尾をでちゅにして語って！",
+    "をかわいこぶって話して！",
+  ];
 
   const sliderOne = document.getElementById("slider-one");
   const sliderTwo = document.getElementById("slider-two");
@@ -38,7 +52,7 @@
 
   // 終了画面の黒板にお題のHTMLをセットする関数
   function setTheme() {
-    const allThemes = themeInputValues.concat(defaultThemes);
+    allThemes = themeInputValues.concat(defaultThemes);
 
     allThemes.forEach((element) => {
       const themeInBlackboardElement = document.createElement("p");
@@ -65,6 +79,13 @@
 
   createFamousQuotes(sliderOne);
   createFamousQuotes(sliderTwo);
+
+  // トップに戻るを押した際に、お題のインプットを空にする
+  finishDisplayButton.addEventListener("click", () => {
+    themeDisplayInputs.forEach((element) => {
+      element.innerHTML("");
+    });
+  });
 
   // スロット
   // スロットパネルのクラス
@@ -123,11 +144,10 @@
     }
   }
 
-  const panels = [new Panel(), new Panel()];
-
   // スロットに配列を渡す
-  const themes = themeInputValues;
+  // const themes = themeInputValues.concat(defaultThemes);
   const spin = document.getElementById("spin");
+
   spin.addEventListener("click", () => {
     if (spin.classList.contains("js-clicked")) {
       return;
@@ -137,7 +157,9 @@
     panels.forEach((panel) => {
       panel.removeJsClicked();
     });
-    panels[0].spin(themes);
+    panels[0].spin(allThemes);
     panels[1].spin(instructions);
   });
+
+  const panels = [new Panel(), new Panel()];
 }
